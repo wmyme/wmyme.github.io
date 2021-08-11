@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>HTTP | Gridea</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://wmyme.github.io//favicon.ico?v=1628693071772">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://wmyme.github.io//styles/main.css">
+
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://wmyme.github.io/">Gridea</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="ca" class="menu">
+                分类
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>HTTP</h1>
+            <p class="article-meta">
+              2021-08-11
+              
+            </p>
+            
+            <div class="post-content">
+              <h2 id="http">HTTP</h2>
+<h3 id="概念">概念</h3>
+<p>​	Hyper Text Transfer Protocol 超文本传输协议</p>
+<ul>
+<li>
+<p>传输协议：定义了，客户端和服务器端通信时，发送数据的格式</p>
+</li>
+<li>
+<p>特点：</p>
+<ol>
+<li>基于TCP/IP的高级协议</li>
+<li>默认端口号:80</li>
+<li>基于请求/响应模型的:一次请求对应一次响应</li>
+<li>无状态的：每次请求之间相互独立，不能交互数据</li>
+</ol>
+</li>
+<li>
+<p>历史版本：</p>
+<ul>
+<li>1.0：每一次请求响应都会建立新的连接</li>
+<li>1.1：复用连接</li>
+</ul>
+</li>
+</ul>
+<h3 id="请求消息数据格式">请求消息数据格式</h3>
+<h4 id="1请求行">1.请求行</h4>
+<p>请求方式 请求url 请求协议/版本<br>
+GET /login.html	HTTP/1.1</p>
+<p>请求方式：</p>
+<p>HTTP协议有7中请求方式，常用的有2种</p>
+<ul>
+<li>
+<p>GET：</p>
+<p>​	1.请求参数在请求行中，在url后。</p>
+<p>​	2.请求的url长度有限制的</p>
+<p>​	3.不太安全</p>
+</li>
+<li>
+<p>POST：</p>
+<p>​	1.请求参数在请求体中</p>
+<p>​	2.请求的url长度没有限制的</p>
+<p>​	3.相对安全</p>
+</li>
+</ul>
+<h4 id="2请求头">2.请求头</h4>
+<p>客户端浏览器告诉服务器一些信息</p>
+<p>请求头名称: 请求头值</p>
+<ul>
+<li>
+<p>常见的请求头：</p>
+<ol>
+<li>User-Agent：浏览器告诉服务器，我访问你使用的浏览器版本信息</li>
+</ol>
+<ul>
+<li>可以在服务器端获取该头的信息，解决浏览器的兼容性问题</li>
+</ul>
+<ol start="2">
+<li>Referer：http://localhost/login.html
+<ul>
+<li>告诉服务器，我(当前请求)从哪里来？<br>
+作用：<br>
+1. 防盗链：<br>
+2. 统计工作：</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="3请求空行">3.请求空行</h4>
+<p>空行，就是用于分割POST请求的请求头，和请求体的。</p>
+<h4 id="4请求体正文">4.请求体(正文)</h4>
+<p>​		封装POST请求消息的请求参数的</p>
+<h4 id="5字符串格式">5.字符串格式</h4>
+<p>​	POST /login.html	HTTP/1.1<br>
+​	Host: localhost<br>
+​	User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0<br>
+​	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,<em>/</em>;q=0.8<br>
+​	Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2<br>
+​	Accept-Encoding: gzip, deflate<br>
+​	Referer: http://localhost/login.html<br>
+​	Connection: keep-alive<br>
+​	Upgrade-Insecure-Requests: 1</p>
+<p>​	username=zhangsan</p>
+<h3 id="响应消息数据格式">响应消息数据格式</h3>
+<h2 id="request">Request</h2>
+<h3 id="request和response的原理">request和response的原理</h3>
+<ol>
+<li>request和response对象是由服务器创建的。我们来使用它们</li>
+<li>request对象是来获取请求消息，response对象是来设置响应消息</li>
+</ol>
+<h3 id="request对象继承体系结构">request对象继承体系结构</h3>
+<p>ServletRequest		--	接口<br>
+|	继承<br>
+HttpServletRequest	-- 接口<br>
+|	实现<br>
+org.apache.catalina.connector.RequestFacade 类(tomcat)</p>
+<h3 id="request功能">request功能</h3>
+<ol>
+<li>获取请求消息数据
+<ol>
+<li>
+<p>获取请求行数据</p>
+<ul>
+<li>GET /day14/demo1?name=zhangsan HTTP/1.1</li>
+<li>方法：
+<ol>
+<li>
+<p>获取请求方式 ：GET</p>
+<ul>
+<li>String getMethod()</li>
+</ul>
+</li>
+<li>
+<p>(*)获取虚拟目录：/day14</p>
+<ul>
+<li>String getContextPath()</li>
+</ul>
+</li>
+<li>
+<p>获取Servlet路径: /demo1</p>
+<ul>
+<li>String getServletPath()</li>
+</ul>
+</li>
+<li>
+<p>获取get方式请求参数：name=zhangsan</p>
+<ul>
+<li>String getQueryString()</li>
+</ul>
+</li>
+<li>
+<p>(*)获取请求URI：/day14/demo1</p>
+<ul>
+<li>
+<p>String getRequestURI():		/day14/demo1</p>
+</li>
+<li>
+<p>StringBuffer getRequestURL()  :http://localhost/day14/demo1</p>
+</li>
+<li>
+<p>URL:统一资源定位符 ： http://localhost/day14/demo1	中华人民共和国</p>
+</li>
+<li>
+<p>URI：统一资源标识符 : /day14/demo1					共和国</p>
+</li>
+</ul>
+</li>
+<li>
+<p>获取协议及版本：HTTP/1.1</p>
+<ul>
+<li>String getProtocol()</li>
+</ul>
+</li>
+<li>
+<p>获取客户机的IP地址：</p>
+<ul>
+<li>String getRemoteAddr()</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>获取请求头数据</p>
+<ul>
+<li>方法：
+<ul>
+<li>(*)String getHeader(String name):通过请求头的名称获取请求头的值</li>
+<li>Enumeration<String> getHeaderNames():获取所有的请求头名称</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>获取请求体数据:</p>
+<ul>
+<li>请求体：只有POST请求方式，才有请求体，在请求体中封装了POST请求的请求参数</li>
+<li>步骤：
+<ol>
+<li>
+<p>获取流对象</p>
+<ul>
+<li>BufferedReader getReader()：获取字符输入流，只能操作字符数据</li>
+<li>ServletInputStream getInputStream()：获取字节输入流，可以操作所有类型数据
+<ul>
+<li>在文件上传知识点后讲解</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>再从流对象中拿数据</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<p>​</p>
+<h3 id="其他功能">其他功能</h3>
+<p>​		1. 获取请求参数通用方式：不论get还是post请求方式都可以使用下列方法来获取请求参数</p>
+<p>​				1. String getParameter(String name):根据参数名称获取参数值    username=zs&amp;password=123<br>
+​				2. String[] getParameterValues(String name):根据参数名称获取参数值的数组  hobby=xx&amp;hobby=game<br>
+​				3. Enumeration<String> getParameterNames():获取所有请求的参数名称<br>
+​				4. Map&lt;String,String[]&gt; getParameterMap():获取所有参数的map集合<br>
+​	<br>
+​			* 中文乱码问题：<br>
+​				* get方式：tomcat 8 已经将get方式乱码问题解决了<br>
+​				* post方式：会乱码<br>
+​					* 解决：在获取参数前，设置request的编码request.setCharacterEncoding(&quot;utf-8&quot;);</p>
+<p>​			2. 请求转发：一种在服务器内部的资源跳转方式<br>
+​				1. 步骤：<br>
+​					1. 通过request对象获取请求转发器对象：RequestDispatcher getRequestDispatcher(String path)<br>
+​					2. 使用RequestDispatcher对象来进行转发：forward(ServletRequest request, ServletResponse response)<br>
+​	<br>
+​			2. 特点：<br>
+​				1. 浏览器地址栏路径不发生变化<br>
+​				2. 只能转发到当前服务器内部资源中。<br>
+​				3. 转发是一次请求</p>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://wmyme.github.io/post/hello-gridea/">
+                <h3 class="post-title">
+                  Webpack
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://wmyme.github.io//images/avatar.png?v=1628693071772" class="no-responsive avatar">
+    <div class="text-muted">温故而知新</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://wmyme.github.io/post/http/">HTTP</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmyme.github.io/post/about/">关于</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmyme.github.io/post/hello-gridea/">Webpack</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://wmyme.github.io/tag/iJ2u2cx9E/" class="badge ">
+          Gridea
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://wmyme.github.io//atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
+</html>
