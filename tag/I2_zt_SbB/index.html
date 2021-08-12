@@ -1,319 +1,147 @@
-<html>
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    vue | Gridea
-</title>
-<link rel="shortcut icon" href="https://wmyme.github.io//favicon.ico?v=1628740403686">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>vue | Gridea</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://wmyme.github.io//favicon.ico?v=1628740644163">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wmyme.github.io//styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://wmyme.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
-</head>
 
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="https://wmyme.github.io/">
-                <img class="avatar" src="https://wmyme.github.io//images/avatar.png?v=1628740403686" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    Gridea
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="https://wmyme.github.io/categories" class="menu">
-                                    分类
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://wmyme.github.io/">
+        <img class="avatar" src="https://wmyme.github.io//images/avatar.png?v=1628740644163" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://wmyme.github.io/">
+        <h1 class="site-title">Gridea</h1>
+      </a>
     </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
 </div>
 
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
-
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-container main-container">
-                <div id="content" class="main-container-left">
-                    
-    <div class="i-card">
-        <b>标签：#
-        vue</b>
-    </div>
-    
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
         
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmyme.github.io/post/vue-jiao-shou-jia/">
-                        Vue脚手架
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2021-08-12</time>
-                    
-                        <a href="https://wmyme.github.io/tag/I2_zt_SbB/" class="post-tag i-tag
-                            i-tag-other_3">
-            #vue
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            脚手架文件结构
-├── node_modules 
-├── public
-│   ├── favicon.ico: 页签图标
-│   └── index.html: 主页面
-├── src
-│   ├── assets: 存放静态资源
-│   │   └── logo.png
-│   │── component: 存放组件
-│   │   └── HelloWorld.vue
-│   │── App.vue: 汇总所有组件
-│   │── main.js: 入口文件
-├── .gitignore: git版本管制忽略的配置
-├── babel.config.js: babel的配置文件
-├── package.json: 应用包配置文件 
-├── README.md: 应用描述文件
-├── package-lock.json：包版本控制文件
-
-关于不同版本的Vue
-
-vue.js与vue.runtime.xxx.js的区别：
-
-vue.js是完整版的Vue，包含：核心功能 + 模板解析器。
-vue.runtime.xxx.js是运行版的Vue，只包含：核心功能；没有模板解析器。
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://wmyme.github.io/categories" class="menu purple-link">
+            分类
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
 
 
-因为vue.runtime.xxx.js没有模板解析器，所以不能使用template这个配置项，需要使用render函数接收到的createElement函数去指定具体内容。
+      <div class="content-container">
 
-vue.config.js配置文件
+        <div class="current-tag-container">
+          <h2 class="title">
+            <i class="icon icon-pricetags-outline"></i> vue
+          </h2> 
+        </div>
 
-使用vue inspect &amp;gt; output.js可以查看到Vue脚手架的默认配置。
-使用vue.config.js可以对脚手架进行个性化定制，详情见：https://cli.vuejs.org/zh
-
-ref属性
-
-被用来给元素或子组件注册引用信息（id的替代者）
-应用在html标签上获取的是真实DOM元素，应用在组件标签上是组件实例对象（vc）
-使用方式：
-
-打标识：&amp;lt;h1 ref=&amp;quot;xxx&amp;quot;&amp;gt;.....&amp;lt;/h1&amp;gt; 或 &amp;lt;School ref=&amp;quot;xxx&amp;quot;&amp;gt;&amp;lt;/School&amp;gt;
-获取：this.$refs.xxx
-
-
-
-props配置项
-
-
-功能：让组件接收外部传过来的数据
-
-
-传递数据：&amp;lt;Demo name=&amp;quot;xxx&amp;quot;/&amp;gt;
-
-
-接收数据：
-
-
-第一种方式（只接收）：props:[&#39;name&#39;]
-
-
-第二种方式（限制类型）：props:{name:String}
-
-
-第三种方式（限制类型、限制必要性、指定默认值）：
-props:{
-	name:{
-	type:String, //类型
-	required:true, //必要性
-	default:&#39;老王&#39; //默认值
-	}
-}
-
-
-
-
-备注：props是只读的，Vue底层会监测你对props的修改，如果进行了修改，就会发出警告，若业务需求确实需要修改，那么请复制props的内容到data中一份，然后去修改data中的数据。
-
-
-
-mixin(混入)
-
-
-功能：可以把多个组件共用的配置提取成一个混入对象
-
-
-使用方式：
-第一步定义混合：
-{
-    data(){....},
-    methods:{....}
-    ....
-}
-
-第二步使用混入：
-​	全局混入：Vue.mixin(xxx)
-​	局部混入：mixins:[&#39;xxx&#39;]
-
-
-插件
-
-
-功能：用于增强Vue
-
-
-本质：包含install方法的一个对象，install的第一个参数是Vue，第二个以后的参数是插件使用者传递的数据。
-
-
-定义插件：
-对象.install = function (Vue, options) {
-    // 1. 添加全局过滤器
-    Vue.filter(....)
-
-    // 2. 添加全局指令
-    Vue.directive(....)
-
-
-    // 3. 配置全局混入(合)
-    Vue.mixin(....)
-
-    // 4. 添加实例方法
-    Vue.prototype.$myMethod = function () {...}
-    Vue.prototype.$myProperty = xxxx
-}
-
-
-
-使用插件：Vue.use()
-
-
-scoped样式
-
-作用：让样式在局部生效，防止冲突。
-写法：&amp;lt;style scoped&amp;gt;
-
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="https://wmyme.github.io/post/vue-jiao-shou-jia/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
+        
+<section class="post-item">
+    <div class="content">
+      <a href="https://wmyme.github.io/post/vue-jiao-shou-jia/">
+        <h2 class="post-title">Vue脚手架</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2021-08-12</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
             
-                <!-- 翻页 -->
+              <a href="https://wmyme.github.io/tag/I2_zt_SbB/">
+                vue
                 
-                </div>
-                <!--  -->
-                <div class="main-container-middle"></div>
-                <!--  -->
-                <div id="sidebar" class="main-container-right">
-
-                    <!-- 个人信息 -->
-                    
-    <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://wmyme.github.io//images/avatar.png?v=1628740403686)">
-        </div>
-        <h1 class="id_card-title">
-            Gridea
-        </h1>
-        <h2 class="id_card-description">
-            温故而知新
-        </h2>
-        <!--  -->
-        <div class="id_card-sns">
-            <!-- github -->
+              </a>
             
-                    <!-- twitter -->
-                    
-                            <!-- weibo -->
-                            
-                                    <!-- facebook -->
-                                    
-
-        </div>
+          </span>
+        
+      </div>
     </div>
     
-
-                        <!-- 公告栏 -->
-                        
-
-                </div>
-            </div>
+  </section>
 
 
+<div class="pagination-container">
+  
+  
+</div>
 
-            <div class="site-footer">
+
+      </div>
+
+      <div class="site-footer">
+  <div class="slogan">温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
   <span id="sitetime"></span>
 <script language=javascript>
     function siteTime(){
@@ -341,21 +169,26 @@ scoped样式
         document.getElementById("sitetime").innerHTML=" 已运行"+diffYears+"年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
     }
     siteTime();
-</script> | 
-  <a class="rss" href="https://wmyme.github.io//atom.xml" target="_blank">RSS</a>
+</script> | <a class="rss" href="https://wmyme.github.io//atom.xml" target="_blank">RSS</a>
 </div>
 
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
 
     </div>
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-</body>
+    <script type="application/javascript">
 
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
 </html>
