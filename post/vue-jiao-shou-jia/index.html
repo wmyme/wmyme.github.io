@@ -1,0 +1,322 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vue脚手架 | Gridea</title>
+<link rel="shortcut icon" href="https://wmyme.github.io//favicon.ico?v=1628731874489">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://wmyme.github.io//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Vue脚手架 | Gridea - Atom Feed" href="https://wmyme.github.io//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="脚手架文件结构
+├── node_modules 
+├── public
+│   ├── favicon.ico: 页签图标
+│   └── index.html: 主页面
+├── src
+│   ├── assets: 存放静态资源
+│ ..." />
+    <meta name="keywords" content="vue" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://wmyme.github.io/">
+  <img class="avatar" src="https://wmyme.github.io//images/avatar.png?v=1628731874489" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Vue脚手架
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-08-12
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://wmyme.github.io/tag/I2_zt_SbB/" class="post-tag">
+                  # vue
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h2 id="脚手架文件结构">脚手架文件结构</h2>
+<pre><code>├── node_modules 
+├── public
+│   ├── favicon.ico: 页签图标
+│   └── index.html: 主页面
+├── src
+│   ├── assets: 存放静态资源
+│   │   └── logo.png
+│   │── component: 存放组件
+│   │   └── HelloWorld.vue
+│   │── App.vue: 汇总所有组件
+│   │── main.js: 入口文件
+├── .gitignore: git版本管制忽略的配置
+├── babel.config.js: babel的配置文件
+├── package.json: 应用包配置文件 
+├── README.md: 应用描述文件
+├── package-lock.json：包版本控制文件
+</code></pre>
+<h2 id="关于不同版本的vue">关于不同版本的Vue</h2>
+<ol>
+<li>vue.js与vue.runtime.xxx.js的区别：
+<ol>
+<li>vue.js是完整版的Vue，包含：核心功能 + 模板解析器。</li>
+<li>vue.runtime.xxx.js是运行版的Vue，只包含：核心功能；没有模板解析器。</li>
+</ol>
+</li>
+<li>因为vue.runtime.xxx.js没有模板解析器，所以不能使用template这个配置项，需要使用render函数接收到的createElement函数去指定具体内容。</li>
+</ol>
+<h2 id="vueconfigjs配置文件">vue.config.js配置文件</h2>
+<ol>
+<li>使用vue inspect &gt; output.js可以查看到Vue脚手架的默认配置。</li>
+<li>使用vue.config.js可以对脚手架进行个性化定制，详情见：https://cli.vuejs.org/zh</li>
+</ol>
+<h2 id="ref属性">ref属性</h2>
+<ol>
+<li>被用来给元素或子组件注册引用信息（id的替代者）</li>
+<li>应用在html标签上获取的是真实DOM元素，应用在组件标签上是组件实例对象（vc）</li>
+<li>使用方式：
+<ol>
+<li>打标识：<code>&lt;h1 ref=&quot;xxx&quot;&gt;.....&lt;/h1&gt;</code> 或 <code>&lt;School ref=&quot;xxx&quot;&gt;&lt;/School&gt;</code></li>
+<li>获取：<code>this.$refs.xxx</code></li>
+</ol>
+</li>
+</ol>
+<h2 id="props配置项">props配置项</h2>
+<ol>
+<li>
+<p>功能：让组件接收外部传过来的数据</p>
+</li>
+<li>
+<p>传递数据：<code>&lt;Demo name=&quot;xxx&quot;/&gt;</code></p>
+</li>
+<li>
+<p>接收数据：</p>
+<ol>
+<li>
+<p>第一种方式（只接收）：<code>props:['name']</code></p>
+</li>
+<li>
+<p>第二种方式（限制类型）：<code>props:{name:String}</code></p>
+</li>
+<li>
+<p>第三种方式（限制类型、限制必要性、指定默认值）：</p>
+<pre><code class="language-js">props:{
+	name:{
+	type:String, //类型
+	required:true, //必要性
+	default:'老王' //默认值
+	}
+}
+</code></pre>
+</li>
+</ol>
+<blockquote>
+<p>备注：props是只读的，Vue底层会监测你对props的修改，如果进行了修改，就会发出警告，若业务需求确实需要修改，那么请复制props的内容到data中一份，然后去修改data中的数据。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="mixin混入">mixin(混入)</h2>
+<ol>
+<li>
+<p>功能：可以把多个组件共用的配置提取成一个混入对象</p>
+</li>
+<li>
+<p>使用方式：</p>
+<p>第一步定义混合：</p>
+<pre><code>{
+    data(){....},
+    methods:{....}
+    ....
+}
+</code></pre>
+<p>第二步使用混入：</p>
+<p>​	全局混入：<code>Vue.mixin(xxx)</code><br>
+​	局部混入：<code>mixins:['xxx']</code></p>
+</li>
+</ol>
+<h2 id="插件">插件</h2>
+<ol>
+<li>
+<p>功能：用于增强Vue</p>
+</li>
+<li>
+<p>本质：包含install方法的一个对象，install的第一个参数是Vue，第二个以后的参数是插件使用者传递的数据。</p>
+</li>
+<li>
+<p>定义插件：</p>
+<pre><code class="language-js">对象.install = function (Vue, options) {
+    // 1. 添加全局过滤器
+    Vue.filter(....)
+
+    // 2. 添加全局指令
+    Vue.directive(....)
+
+
+    // 3. 配置全局混入(合)
+    Vue.mixin(....)
+
+    // 4. 添加实例方法
+    Vue.prototype.$myMethod = function () {...}
+    Vue.prototype.$myProperty = xxxx
+}
+</code></pre>
+</li>
+<li>
+<p>使用插件：<code>Vue.use()</code></p>
+</li>
+</ol>
+<h2 id="scoped样式">scoped样式</h2>
+<ol>
+<li>作用：让样式在局部生效，防止冲突。</li>
+<li>写法：<code>&lt;style scoped&gt;</code></li>
+</ol>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E8%84%9A%E6%89%8B%E6%9E%B6%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84">脚手架文件结构</a></li>
+<li><a href="#%E5%85%B3%E4%BA%8E%E4%B8%8D%E5%90%8C%E7%89%88%E6%9C%AC%E7%9A%84vue">关于不同版本的Vue</a></li>
+<li><a href="#vueconfigjs%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">vue.config.js配置文件</a></li>
+<li><a href="#ref%E5%B1%9E%E6%80%A7">ref属性</a></li>
+<li><a href="#props%E9%85%8D%E7%BD%AE%E9%A1%B9">props配置项</a></li>
+<li><a href="#mixin%E6%B7%B7%E5%85%A5">mixin(混入)</a></li>
+<li><a href="#%E6%8F%92%E4%BB%B6">插件</a></li>
+<li><a href="#scoped%E6%A0%B7%E5%BC%8F">scoped样式</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wmyme.github.io/post/http/">
+              <h3 class="post-title">
+                Http
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://wmyme.github.io//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

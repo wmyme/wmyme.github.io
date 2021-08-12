@@ -1,100 +1,107 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Webpack | Gridea</title>
-<meta name="description" content="温故而知新">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://wmyme.github.io//favicon.ico?v=1628696070405">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="https://wmyme.github.io//favicon.ico?v=1628731874489">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://wmyme.github.io//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Webpack | Gridea - Atom Feed" href="https://wmyme.github.io//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-
+    <meta name="description" content="
+健康快乐每一天
+Webpack入门-学习总结
+ 写于2020-07-16
+所有的代码在github
+一、Webpack 简介
+1.1 webpack 是什么
+webpack 是一种前端资源构建工具，一个静态模块打包器(module bun..." />
+    <meta name="keywords" content="Gridea" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-  
-    <nav class="navbar border fixed split-nav">
-  <div class="nav-brand">
-    <h3><a href="https://wmyme.github.io/">Gridea</a></h3>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://wmyme.github.io/">
+  <img class="avatar" src="https://wmyme.github.io//images/avatar.png?v=1628731874489" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
   </div>
-  <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible1">
-    <button>
-      <label for="collapsible1">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </label>
-    </button>
-    <div class="collapsible-body">
-      <ul class="inline">
-        
-          <li>
-            
-              <a href="/" class="menu">
-                首页
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/archives" class="menu">
-                归档
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/tags" class="menu">
-                标签
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/post/about" class="menu">
-                关于
-              </a>
-            
-          </li>
-        
-      </ul>
-    </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
   </div>
-</nav>
+</div>
 
-    <div id="top" class="row site">
-      <div class="sm-12 md-8 col">
-        <div class="paper">
-          <article class="article">
-            <h1>Webpack</h1>
-            <p class="article-meta">
-              2018-12-12
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Webpack
+            </h2>
+            <div class="post-info">
+              <span>
+                2018-12-12
+              </span>
+              <span>
+                33 min read
+              </span>
               
-                <a href="https://wmyme.github.io/tag/iJ2u2cx9E/" class="badge secondary">
-                  Gridea
+                <a href="https://wmyme.github.io/tag/iJ2u2cx9E/" class="post-tag">
+                  # Gridea
                 </a>
               
-            </p>
+            </div>
             
-              <img src="https://wmyme.github.io//post-images/hello-gridea.png" alt="Webpack">
+              <img class="post-feature-image" src="https://wmyme.github.io//post-images/hello-gridea.png" alt="">
             
-            <div class="post-content">
-              <figure data-type="image" tabindex="1"><img src="http://cdn.woc12138.com/profile2.jpg" alt="profile-photo" loading="lazy"></figure>
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <figure data-type="image" tabindex="1"><img src="http://cdn.woc12138.com/profile2.jpg" alt="profile-photo" loading="lazy"></figure>
 <h2 id="健康快乐每一天">健康快乐每一天</h2>
 <h1 id="webpack入门-学习总结">Webpack入门-学习总结</h1>
 <p><img src="http://cdn.woc12138.com/write.gif" alt="icon" loading="lazy"> 写于2020-07-16</p>
@@ -1177,93 +1184,153 @@ cache: {
 <h2 id="更多内容">更多内容</h2>
 <p><a href="https://github.com/webpack/changelog-v5">github</a></p>
 
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%81%A5%E5%BA%B7%E5%BF%AB%E4%B9%90%E6%AF%8F%E4%B8%80%E5%A4%A9">健康快乐每一天</a></li>
+</ul>
+</li>
+<li><a href="#webpack%E5%85%A5%E9%97%A8-%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93">Webpack入门-学习总结</a></li>
+<li><a href="#%E4%B8%80-webpack-%E7%AE%80%E4%BB%8B">一、Webpack 简介</a>
+<ul>
+<li><a href="#11-webpack-%E6%98%AF%E4%BB%80%E4%B9%88">1.1 webpack 是什么</a></li>
+<li><a href="#12-webpack-%E4%BA%94%E4%B8%AA%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5">1.2 webpack 五个核心概念</a><br>
+*
+<ul>
+<li><a href="#121-entry">1.2.1 Entry</a></li>
+<li><a href="#122-output">1.2.2 Output</a></li>
+<li><a href="#123-loader">1.2.3 Loader</a></li>
+<li><a href="#124-plugins">1.2.4 Plugins</a></li>
+<li><a href="#125-mode">1.2.5 Mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E4%BA%8C-webpack-%E5%88%9D%E4%BD%93%E9%AA%8C">二、Webpack 初体验</a>
+<ul>
+<li><a href="#21-%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE">2.1 初始化配置</a></li>
+<li><a href="#22-%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85%E5%BA%94%E7%94%A8">2.2 编译打包应用</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%89-webpack-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE">三、Webpack 开发环境的基本配置</a></li>
+<li><a href="#%E5%9B%9B-webpack-%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE">四、Webpack 生产环境的基本配置</a></li>
+<li><a href="#%E4%BA%94-webpack-%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE">五、Webpack 优化配置</a>
+<ul>
+<li><a href="#51-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96">5.1 开发环境性能优化</a>
+<ul>
+<li><a href="#511-hmr%E6%A8%A1%E5%9D%97%E7%83%AD%E6%9B%BF%E6%8D%A2">5.1.1 HMR（模块热替换）</a></li>
+<li><a href="#512-source-map">5.1.2 source-map</a></li>
+</ul>
+</li>
+<li><a href="#52-%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96">5.2 生产环境性能优化</a>
+<ul>
+<li><a href="#521-%E4%BC%98%E5%8C%96%E6%89%93%E5%8C%85%E6%9E%84%E5%BB%BA%E9%80%9F%E5%BA%A6">5.2.1 优化打包构建速度</a>
+<ul>
+<li><a href="#5211-oneof">5.2.1.1 oneOf</a></li>
+<li><a href="#5212-babel-%E7%BC%93%E5%AD%98">5.2.1.2 babel 缓存</a></li>
+<li><a href="#5213-%E5%A4%9A%E8%BF%9B%E7%A8%8B%E6%89%93%E5%8C%85">5.2.1.3 多进程打包</a></li>
+<li><a href="#5214-externals">5.2.1.4 externals</a></li>
+<li><a href="#5215-dll">5.2.1.5 dll</a></li>
+</ul>
+</li>
+<li><a href="#522-%E4%BC%98%E5%8C%96%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E7%9A%84%E6%80%A7%E8%83%BD">5.2.2 优化代码运行的性能</a>
+<ul>
+<li><a href="#5221-%E7%BC%93%E5%AD%98">5.2.2.1 缓存</a></li>
+<li><a href="#5222-tree-shaking%E6%A0%91%E6%91%87">5.2.2.2 tree shaking（树摇）</a></li>
+<li><a href="#5223-code-split%E4%BB%A3%E7%A0%81%E5%88%86%E5%89%B2">5.2.2.3 code split（代码分割）</a></li>
+<li><a href="#5224-lazy-loading%E6%87%92%E5%8A%A0%E8%BD%BD%E9%A2%84%E5%8A%A0%E8%BD%BD">5.2.2.4 lazy loading（懒加载/预加载）</a></li>
+<li><a href="#5225-pwa%E7%A6%BB%E7%BA%BF%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%8A%80%E6%9C%AF">5.2.2.5 pwa（离线可访问技术）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%85%AD-webpack-%E9%85%8D%E7%BD%AE%E8%AF%A6%E6%83%85">六、Webpack 配置详情</a>
+<ul>
+<li><a href="#61-entry">6.1 entry</a></li>
+<li><a href="#62-output">6.2 output</a></li>
+<li><a href="#63-module">6.3 module</a></li>
+<li><a href="#64-resolve">6.4 resolve</a></li>
+<li><a href="#65-dev-server">6.5 dev server</a></li>
+<li><a href="#66-optimization">6.6 optimization</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%83-webpack5-%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8">七、Webpack5 介绍和使用</a>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD">下载</a></li>
+<li><a href="#%E8%87%AA%E5%8A%A8%E5%88%A0%E9%99%A4-nodejs-polyfills">自动删除 Node.js Polyfills</a></li>
+<li><a href="#chunk-id">Chunk ID</a></li>
+<li><a href="#tree-shaking">Tree Shaking</a></li>
+<li><a href="#output">Output</a></li>
+<li><a href="#caching">Caching</a></li>
+<li><a href="#%E7%9B%91%E8%A7%86%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6">监视输出文件</a></li>
+<li><a href="#%E9%BB%98%E8%AE%A4%E5%80%BC">默认值</a></li>
+<li><a href="#%E6%9B%B4%E5%A4%9A%E5%86%85%E5%AE%B9">更多内容</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
             </div>
           </article>
         </div>
-        <div class="paper" data-aos="fade-in">
-          
-        </div>
-        
-      </div>
 
-      <div class="sm-12 md-4 col sidebar">
-  <div class="paper info-container">
-    <img src="https://wmyme.github.io//images/avatar.png?v=1628696070405" class="no-responsive avatar">
-    <div class="text-muted">温故而知新</div>
-    <div class="social-container">
-      
         
-      
+
         
-      
-        
-      
-        
-      
-        
-      
-    </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      最新文章
-    </div>
-    <div class="row">
-      <ul>
-        
-          
-            <li>
-              <a href="https://wmyme.github.io/post/http/">Http</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://wmyme.github.io/post/about/">关于</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://wmyme.github.io/post/hello-gridea/">Webpack</a>
-            </li>
-          
-        
-      </ul>
-    </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      标签列表
-    </div>
-    <div class="row">
-      
-        <a href="https://wmyme.github.io/tag/iJ2u2cx9E/" class="badge secondary">
-          Gridea
-        </a>
-      
-    </div>
-  </div>
-  <div class="paper">
-    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://wmyme.github.io//atom.xml" target="_blank">RSS</a>
-  </div>
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://wmyme.github.io//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
 </div>
 
-
+      </div>
     </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad()
 
-<script type="application/javascript">
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-AOS.init();
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
 
-hljs.initHighlightingOnLoad()
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
 
-</script>
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
 
-
-
-
+    </script>
   </body>
 </html>
