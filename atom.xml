@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmyme.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-08-12T01:31:21.817Z</updated>
+    <updated>2021-08-12T02:00:21.014Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmyme.github.io/"/>
     <link rel="self" href="https://wmyme.github.io/atom.xml"/>
@@ -10,6 +10,43 @@
     <logo>https://wmyme.github.io/images/avatar.png</logo>
     <icon>https://wmyme.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[js实现网站运行时间统计]]></title>
+        <id>https://wmyme.github.io/post/js-shi-xian-wang-zhan-yun-xing-shi-jian-tong-ji/</id>
+        <link href="https://wmyme.github.io/post/js-shi-xian-wang-zhan-yun-xing-shi-jian-tong-ji/">
+        </link>
+        <updated>2021-08-12T01:51:00.000Z</updated>
+        <content type="html"><![CDATA[<pre><code class="language-js">&lt;span id=&quot;sitetime&quot;&gt;&lt;/span&gt;
+&lt;script language=javascript&gt;
+    function siteTime(){
+        window.setTimeout(&quot;siteTime()&quot;, 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth()+1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        var t1 = Date.UTC(2021,8,11,00,00,00); //北京时间2016-12-1 00:00:00
+        var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+        var diff = t2-t1;
+        var diffYears = Math.floor(diff/years);
+        var diffDays = Math.floor((diff/days)-diffYears*365);
+        var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+        var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+        var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+        document.getElementById(&quot;sitetime&quot;).innerHTML=&quot; 已运行&quot;+diffYears+&quot;年 &quot;+diffDays+&quot; 天 &quot;+diffHours+&quot; 小时 &quot;+diffMinutes+&quot; 分钟 &quot;+diffSeconds+&quot; 秒&quot;;
+    }
+    siteTime();
+&lt;/script&gt;
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Vue脚手架]]></title>
         <id>https://wmyme.github.io/post/vue-jiao-shou-jia/</id>
