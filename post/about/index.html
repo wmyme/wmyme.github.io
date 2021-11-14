@@ -1,0 +1,4099 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="Gridea静态个人博客">
+<meta name="description" content="温故而知新">
+<meta name="theme-color" content="#000">
+<title>关于 | MYBLOG</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1636868718360">
+<link rel="stylesheet" href="/media/css/pisces.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/default.css"
+  rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/" rel="stylesheet" />
+
+<link rel="stylesheet" href="/styles/main.css">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script src="/media/js/jquery.js"></script>
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+
+  <meta name="description" content="关于" />
+  <meta name="keywords" content="" />
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="pisces">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>MYBLOG</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">温故而知新</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-home"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives/" target="_self">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags/" target="_self">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/about/" target="_self">
+                  <i class="fa fa-user"></i> 关于
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/share/" target="_self">
+                  <i class="fa fa-globe"></i> 软件分享
+                </a>
+              
+            </li>
+          
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout pisces ">
+      <div class="section-layout-wrapper">
+        
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body pisces" id="sidebar_body">
+        
+          
+            
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">wmy</p>
+    
+    <div class="site-description right-motion">
+      
+        <p id="binft">温故而知新</p>
+      
+    </div>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">10</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">3</span>
+        <span class="site-item-stat-name language" data-lan="category">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">3</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+  
+  
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        
+          
+            <a href="https://github.com/wmyme">
+              <i class="fa fa-github" title="github"></i>
+            </a>
+          
+        
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+          
+        
+      </div>
+    </div>
+  
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    jQuery.Velocity(hideElement, 'stop');
+    jQuery.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        jQuery.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://wmyme.github.io/post/about/">
+      关于
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2019-01-25 19:09:48">2019-01-25</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>1<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>47<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</section>
+            <div class="post-body next-md-body" id="post_body">
+              <blockquote>
+<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
+</blockquote>
+<p>🏠 关于本站 ：基于Gridea搭建的静态个人博客</p>
+<p>👨‍💻 博主是谁：ME</p>
+<p>⛹ 兴趣爱好：</p>
+<p>📬 联系我呀：2980214626@qq.com</p>
+
+            </div>
+            
+              <div class="reward-btn">
+                <div class="reward-btn-text">赞赏</div>
+              </div>
+            
+            
+            
+  
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <span id="busuanzi_container_site_pv">浏览数 <span id="busuanzi_value_site_pv"></span> 次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">访客数 <span id="busuanzi_value_site_uv"></span> 人</span>
+    <div class="copyright">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> ©2019 | Theme By <a
+        href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
+    </div>
+    <div class="poweredby">
+      <span style="display:none" ref='time'>2021-08-11 00:00:00</span>
+<span v-html="runTime"></span>
+    </div>
+  </footer>
+  
+  
+  <div class="pisces back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
+  
+  
+  
+<link rel="stylesheet" href="/media/live2d/css/live2d.css" />
+<div class="box-scale">
+  <div id="landlord" style="left: 5px;bottom: px;"
+    data-key="">
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    
+
+      <div class="message" style="opacity:0"></div>
+      <div class="live_talk_input_body">
+        <div class="live_talk_input_name_body">
+          <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off"
+            placeholder="你的名字" />
+        </div>
+        <div class="live_talk_input_text_body">
+          <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off"
+            placeholder="要和我聊什么呀？" />
+          <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+        </div>
+      </div>
+      <input name="live_talk" id="live_talk" value="1" type="hidden" />
+      <div class="live_ico_box">
+        <div class="live_ico_item type_info" id="showInfoBtn"></div>
+        <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        
+        <div class="live_ico_item type_music" id="musicButton"></div>
+        
+        <div class="live_ico_item type_youdu" id="youduButton"></div>
+        <div class="live_ico_item type_quit" id="hideButton"></div>
+        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+        <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+        <input id="duType" value="douqilai" type="hidden">
+        
+        <input name="live2dBGM" value="" type="hidden">
+        
+      </div>
+    
+  </div>
+</div>
+<div id="open_live2d">召唤看板娘</div>
+<script>
+  var message_Path = 'https://cdn.jsdelivr.net/gh/hsxyhao/live2d.github.io@master/';
+  let landlord = document.querySelector('#landlord');
+  var apiKey = landlord.dataset.key;
+</script>
+<script type="text/javascript" src="/media/live2d/js/live2d.js"></script>
+<script>
+	var home_Path = document.location.protocol + '//' + window.document.location.hostname + ":" + window.document.location.port + '/';
+	var userAgent = window.navigator.userAgent.toLowerCase();
+	var norunAI = ["android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser", "msie", "trident/7.0"];
+	var norunFlag = false;
+
+	for (var i = 0; i < norunAI.length; i++) {
+		if (userAgent.indexOf(norunAI[i]) > -1) {
+			norunFlag = true;
+			break;
+		}
+	}
+
+	if (!window.WebGLRenderingContext) {
+		norunFlag = true;
+	}
+
+	if (!norunFlag) {
+		var hitFlag = false;
+		var AIFadeFlag = false;
+		var liveTlakTimer = null;
+		var sleepTimer_ = null;
+		var AITalkFlag = false;
+		var talkNum = 0;
+		(function () {
+			function renderTip(template, context) {
+				var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
+				return template.replace(tokenReg, function (word, slash1, token, slash2) {
+					if (slash1 || slash2) {
+						return word.replace('\\', '');
+					}
+					var variables = token.replace(/\s/g, '').split('.');
+					var currentObject = context;
+					var i, length, variable;
+					for (i = 0, length = variables.length; i < length; ++i) {
+						variable = variables[i];
+						currentObject = currentObject[variable];
+						if (currentObject === undefined || currentObject === null) return '';
+					}
+					return currentObject;
+				});
+			}
+
+			String.prototype.renderTip = function (context) {
+				return renderTip(this, context);
+			};
+
+			var re = /x/;
+			re.toString = function () {
+				showMessage('哈哈，你打开了控制台，是想要看看我的秘密吗？', 5000);
+				return '';
+			};
+
+			$(document).on('copy', function () {
+				showMessage('你都复制了些什么呀，转载要记得加上出处哦~~', 5000);
+			});
+
+			function initTips() {
+				$.ajax({
+					cache: true,
+					url: message_Path + 'message.json',
+					dataType: "json",
+					success: function (result) {
+						$.each(result.mouseover, function (index, tips) {
+							$(tips.selector).mouseover(function () {
+								var text = tips.text;
+								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
+								text = text.renderTip({ text: $(this).text() });
+								showMessage(text, 3000);
+								talkValTimer();
+								clearInterval(liveTlakTimer);
+								liveTlakTimer = null;
+							});
+							$(tips.selector).mouseout(function () {
+								showHitokoto();
+								if (liveTlakTimer == null) {
+									liveTlakTimer = window.setInterval(function () {
+										showHitokoto();
+									}, 15000);
+								};
+							});
+						});
+						$.each(result.click, function (index, tips) {
+							$(tips.selector).click(function () {
+								if (hitFlag) {
+									return false
+								}
+								hitFlag = true;
+								setTimeout(function () {
+									hitFlag = false;
+								}, 8000);
+								var text = tips.text;
+								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
+								text = text.renderTip({ text: $(this).text() });
+								showMessage(text, 3000);
+							});
+							clearInterval(liveTlakTimer);
+							liveTlakTimer = null;
+							if (liveTlakTimer == null) {
+								liveTlakTimer = window.setInterval(function () {
+									showHitokoto();
+								}, 15000);
+							};
+						});
+					}
+				});
+			}
+			initTips();
+
+			var text;
+			if (document.referrer !== '') {
+				var referrer = document.createElement('a');
+				referrer.href = document.referrer;
+				text = '嗨！来自 <span style="color:#0099cc;">' + referrer.hostname + '</span> 的朋友！';
+				var domain = referrer.hostname.split('.')[1];
+				if (domain == 'baidu') {
+					text = '嗨！ 来自 百度搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				} else if (domain == 'so') {
+					text = '嗨！ 来自 360搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				} else if (domain == 'google') {
+					text = '嗨！ 来自 谷歌搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				}
+			} else {
+				if (window.location.href == home_Path) { //主页URL判断，需要斜杠结尾
+					var now = (new Date()).getHours();
+					if (now > 23 || now <= 5) {
+						text = '你是夜猫子呀？这么晚还不睡觉，明天起的来嘛？';
+					} else if (now > 5 && now <= 7) {
+						text = '早上好！一日之计在于晨，美好的一天就要开始了！';
+					} else if (now > 7 && now <= 11) {
+						text = '上午好！工作顺利嘛，不要久坐，多起来走动走动哦！';
+					} else if (now > 11 && now <= 14) {
+						text = '中午了，工作了一个上午，现在是午餐时间！';
+					} else if (now > 14 && now <= 17) {
+						text = '午后很容易犯困呢，今天的运动目标完成了吗？';
+					} else if (now > 17 && now <= 19) {
+						text = '傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~~';
+					} else if (now > 19 && now <= 21) {
+						text = '晚上好，今天过得怎么样？';
+					} else if (now > 21 && now <= 23) {
+						text = '已经这么晚了呀，早点休息吧，晚安~~';
+					} else {
+						text = '嗨~ 快来逗我玩吧！';
+					}
+				} else {
+					text = '欢迎阅读<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				}
+			}
+			showMessage(text, 12000);
+		})();
+
+		liveTlakTimer = setInterval(function () {
+			showHitokoto();
+		}, 15000);
+
+		function showHitokoto() {
+			if (sessionStorage.getItem("Sleepy") !== "1") {
+				if (!AITalkFlag) {
+					$.getJSON('https://v1.hitokoto.cn/', function (result) {
+						talkValTimer();
+						showMessage(result.hitokoto, 0);
+					});
+				}
+			} else {
+				hideMessage(0);
+				if (sleepTimer_ == null) {
+					sleepTimer_ = setInterval(function () {
+						checkSleep();
+					}, 200);
+				}
+			}
+		}
+
+		function checkSleep() {
+			var sleepStatu = sessionStorage.getItem("Sleepy");
+			if (sleepStatu !== '1') {
+				talkValTimer();
+				showMessage('你回来啦~', 0);
+				clearInterval(sleepTimer_);
+				sleepTimer_ = null;
+			}
+		}
+
+		function showMessage(text, timeout) {
+			if (Array.isArray(text)) text = text[Math.floor(Math.random() * text.length + 1) - 1];
+			$('.message').stop();
+			$('.message').html(text);
+			$('.message').fadeTo(200, 1);
+			//if (timeout === null) timeout = 5000;
+			//hideMessage(timeout);
+		}
+		function talkValTimer() {
+			$('#live_talk').val('1');
+		}
+
+		function hideMessage(timeout) {
+			//$('.message').stop().css('opacity',1);
+			if (timeout === null) timeout = 5000;
+			$('.message').delay(timeout).fadeTo(200, 0);
+		}
+
+		function initLive2d() {
+			$('#hideButton').on('click', function () {
+				if (AIFadeFlag) {
+					return false;
+				} else {
+					AIFadeFlag = true;
+					localStorage.setItem("live2dhidden", "0");
+					$('#landlord').fadeOut(200);
+					$('#open_live2d').delay(200).fadeIn(200);
+					setTimeout(function () {
+						AIFadeFlag = false;
+					}, 300);
+				}
+			});
+			$('#open_live2d').on('click', function () {
+				if (AIFadeFlag) {
+					return false;
+				} else {
+					AIFadeFlag = true;
+					localStorage.setItem("live2dhidden", "1");
+					$('#open_live2d').fadeOut(200);
+					$('#landlord').delay(200).fadeIn(200);
+					setTimeout(function () {
+						AIFadeFlag = false;
+					}, 300);
+				}
+			});
+			$('#youduButton').on('click', function () {
+				if ($('#youduButton').hasClass('doudong')) {
+					var typeIs = $('#youduButton').attr('data-type');
+					$('#youduButton').removeClass('doudong');
+					$('body').removeClass(typeIs);
+					$('#youduButton').attr('data-type', '');
+				} else {
+					var duType = $('#duType').val();
+					var duArr = duType.split(",");
+					var dataType = duArr[Math.floor(Math.random() * duArr.length)];
+
+					$('#youduButton').addClass('doudong');
+					$('#youduButton').attr('data-type', dataType);
+					$('body').addClass(dataType);
+				}
+			});
+			if (apiKey) {
+				$('#showInfoBtn').on('click', function () {
+					var live_statu = $('#live_statu_val').val();
+					if (live_statu == "0") {
+						return
+					} else {
+						$('#live_statu_val').val("0");
+						$('.live_talk_input_body').fadeOut(500);
+						AITalkFlag = false;
+						showHitokoto();
+						$('#showTalkBtn').show();
+						$('#showInfoBtn').hide();
+					}
+				});
+				$('#showTalkBtn').on('click', function () {
+					var live_statu = $('#live_statu_val').val();
+					if (live_statu == "1") {
+						return
+					} else {
+						$('#live_statu_val').val("1");
+						$('.live_talk_input_body').fadeIn(500);
+						AITalkFlag = true;
+						$('#showTalkBtn').hide();
+						$('#showInfoBtn').show();
+
+					}
+				});
+				$('#talk_send').on('click', function () {
+					var info_ = $('#AIuserText').val();
+					var userid_ = $('#AIuserName').val();
+					if (info_ == "") {
+						showMessage('写点什么吧！', 0);
+						return;
+					}
+					if (userid_ == "") {
+						showMessage('聊之前请告诉我你的名字吧！', 0);
+						return;
+					}
+					showMessage('思考中~', 0);
+					let protocol = window.location.protocol.indexOf("s") > 0 ? "https" : "http";
+					$.ajax({
+						type: "get",
+						url: `${protocol}://www.tuling123.com/openapi/api?key=${apiKey}&info=${info_}`,
+						dataType: "json",
+						success: function (res) {
+							talkValTimer();
+							showMessage(res.text, 0);
+							$('#AIuserText').val("");
+							sessionStorage.setItem("live2duser", userid_);
+						},
+						error: function (e) {
+							talkValTimer();
+							showMessage('似乎有什么错误，请和站长联系！', 0);
+						}
+					});
+				});
+			} else {
+				$('#showInfoBtn').hide();
+				$('#showTalkBtn').hide();
+			}
+			//获取音乐信息初始化
+			var bgmListInfo = $('input[name=live2dBGM]');
+			if (bgmListInfo.length == 0) {
+				$('#musicButton').hide();
+			} else {
+				var bgmPlayNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+				var bgmPlayTime = 0;
+				var live2dBGM_Num = sessionStorage.getItem("live2dBGM_Num");
+				var live2dBGM_PlayTime = sessionStorage.getItem("live2dBGM_PlayTime");
+				if (live2dBGM_Num) {
+					if (live2dBGM_Num <= $('input[name=live2dBGM]').length - 1) {
+						bgmPlayNow = parseInt(live2dBGM_Num);
+					}
+				}
+				if (live2dBGM_PlayTime) {
+					bgmPlayTime = parseInt(live2dBGM_PlayTime);
+				}
+				var live2dBGMSrc = bgmListInfo.eq(bgmPlayNow).val();
+				$('#live2d_bgm').attr('data-bgm', bgmPlayNow);
+				$('#live2d_bgm').attr('src', live2dBGMSrc);
+				$('#live2d_bgm')[0].currentTime = bgmPlayTime;
+				$('#live2d_bgm')[0].volume = 0.5;
+				var live2dBGM_IsPlay = sessionStorage.getItem("live2dBGM_IsPlay");
+				var live2dBGM_WindowClose = sessionStorage.getItem("live2dBGM_WindowClose");
+				if (live2dBGM_IsPlay == '0' && live2dBGM_WindowClose == '0') {
+					$('#live2d_bgm')[0].play();
+					$('#musicButton').addClass('play');
+				}
+				sessionStorage.setItem("live2dBGM_WindowClose", '1');
+				$('#musicButton').on('click', function () {
+					if ($('#musicButton').hasClass('play')) {
+						$('#live2d_bgm')[0].pause();
+						$('#musicButton').removeClass('play');
+						sessionStorage.setItem("live2dBGM_IsPlay", '1');
+					} else {
+						$('#live2d_bgm')[0].play();
+						$('#musicButton').addClass('play');
+						sessionStorage.setItem("live2dBGM_IsPlay", '0');
+					}
+				});
+				window.onbeforeunload = function () {
+					sessionStorage.setItem("live2dBGM_WindowClose", '0');
+					if ($('#musicButton').hasClass('play')) {
+						sessionStorage.setItem("live2dBGM_IsPlay", '0');
+					}
+				}
+				document.getElementById('live2d_bgm').addEventListener("timeupdate", function () {
+					var live2dBgmPlayTimeNow = document.getElementById('live2d_bgm').currentTime;
+					sessionStorage.setItem("live2dBGM_PlayTime", live2dBgmPlayTimeNow);
+				});
+				document.getElementById('live2d_bgm').addEventListener("ended", function () {
+					var listNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+					listNow++;
+					if (listNow > $('input[name=live2dBGM]').length - 1) {
+						listNow = 0;
+					}
+					var listNewSrc = $('input[name=live2dBGM]').eq(listNow).val();
+					sessionStorage.setItem("live2dBGM_Num", listNow);
+					$('#live2d_bgm').attr('src', listNewSrc);
+					$('#live2d_bgm')[0].play();
+					$('#live2d_bgm').attr('data-bgm', listNow);
+				});
+				document.getElementById('live2d_bgm').addEventListener("error", function () {
+					$('#live2d_bgm')[0].pause();
+					$('#musicButton').removeClass('play');
+					showMessage('音乐似乎加载不出来了呢！', 0);
+				});
+			}
+			//获取用户名
+			var live2dUser = sessionStorage.getItem("live2duser");
+			if (live2dUser !== null) {
+				$('#AIuserName').val(live2dUser);
+			}
+			//获取位置
+			var landL = sessionStorage.getItem("historywidth");
+			var landB = sessionStorage.getItem("historyheight");
+			if (landL == null || landB == null) {
+				landL = '5px'
+				landB = '0px'
+			}
+			$('#landlord').css('left', landL + 'px');
+			$('#landlord').css('bottom', landB + 'px');
+			//移动
+			function getEvent() {
+				return window.event || arguments.callee.caller.arguments[0];
+			}
+			var smcc = document.getElementById("landlord");
+			var moveX = 0;
+			var moveY = 0;
+			var moveBottom = 0;
+			var moveLeft = 0;
+			var moveable = false;
+			var docMouseMoveEvent = document.onmousemove;
+			var docMouseUpEvent = document.onmouseup;
+			smcc.onmousedown = function () {
+				var ent = getEvent();
+				moveable = true;
+				moveX = ent.clientX;
+				moveY = ent.clientY;
+				var obj = smcc;
+				moveBottom = parseInt(obj.style.bottom);
+				moveLeft = parseInt(obj.style.left);
+				if (isFirefox = navigator.userAgent.indexOf("Firefox") > 0) {
+					window.getSelection().removeAllRanges();
+				}
+				document.onmousemove = function () {
+					if (moveable) {
+						var ent = getEvent();
+						var x = moveLeft + ent.clientX - moveX;
+						var y = moveBottom + (moveY - ent.clientY);
+						obj.style.left = x + "px";
+						obj.style.bottom = y + "px";
+					}
+				};
+				document.onmouseup = function () {
+					if (moveable) {
+						var historywidth = obj.style.left;
+						var historyheight = obj.style.bottom;
+						historywidth = historywidth.replace('px', '');
+						historyheight = historyheight.replace('px', '');
+						sessionStorage.setItem("historywidth", historywidth);
+						sessionStorage.setItem("historyheight", historyheight);
+						document.onmousemove = docMouseMoveEvent;
+						document.onmouseup = docMouseUpEvent;
+						moveable = false;
+						moveX = 0;
+						moveY = 0;
+						moveBottom = 0;
+						moveLeft = 0;
+					}
+				};
+			};
+		}
+		$(document).ready(function () {
+			var AIimgSrc = [];
+			let chooseLive2d = 'hijiki'
+			if (chooseLive2d === 'histoire') {
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_00.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_01.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_02.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_03.png");
+			} else if (chooseLive2d === 'rem') {
+				AIimgSrc.push(message_Path + "model/rem/remu2048/texture_00.png");
+			} else if (chooseLive2d === 'aoba') {
+				AIimgSrc.push(message_Path + "model/aoba/textures/texture_00.png");
+			} else if (chooseLive2d === 'hijiki') {
+				AIimgSrc.push(message_Path + "model/hijiki/moc/hijiki.2048/texture_00.png");
+			} else if (chooseLive2d === 'tororo') {
+				AIimgSrc.push(message_Path + "model/tororo/moc/tororo.2048/texture_00.png");
+			}
+			var images = [];
+			var imgLength = AIimgSrc.length;
+			var loadingNum = 0;
+			for (var i = 0; i < imgLength; i++) {
+				images[i] = new Image();
+				images[i].src = AIimgSrc[i];
+				images[i].onload = function () {
+					loadingNum++;
+					if (loadingNum === imgLength) {
+						var live2dhidden = localStorage.getItem("live2dhidden");
+						if (live2dhidden === "0") {
+							setTimeout(function () {
+								$('#open_live2d').fadeIn(200);
+							}, 1300);
+						} else {
+							setTimeout(function () {
+								$('#landlord').fadeIn(200);
+							}, 1300);
+						}
+						let model = '';
+						if (chooseLive2d === 'histoire') {
+							model = message_Path + "model/histoire/model.json";
+						} else if (chooseLive2d === 'rem') {
+							model = message_Path + "model/rem/model.json";
+						} else if (chooseLive2d === 'aoba') {
+							model = message_Path + "model/aoba/model.json";
+						} else if (chooseLive2d === 'hijiki') {
+							model = message_Path + "model/hijiki/hijiki.model.json";
+						} else if (chooseLive2d === 'tororo') {
+							model = message_Path + "model/tororo/tororo.model.json";
+						}
+						setTimeout(function () {
+							loadlive2d("live2d", model);
+						}, 1000);
+						initLive2d();
+						images = null;
+					}
+				}
+			}
+		});
+	}
+</script>
+  
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+    back2TopText = document.querySelector('#back_to_top_text'),
+    drawerBox = document.querySelector('#drawer_box'),
+    rightSideBar = document.querySelector('.sidebar'),
+    viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener('scroll', function (e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+
+  let hasCacu = false;
+  window.addEventListener('resize', function (e) {
+    calcuHeight();
+  });
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      jQuery.Velocity(rightSideBar, 'stop');
+      jQuery.Velocity(viewport, 'stop');
+      jQuery.Velocity(rightMotions, 'stop');
+      if (open) {
+        jQuery.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            jQuery.Velocity(rightMotions, transitionDir, {});
+          }
+        })
+        jQuery.Velocity(viewport, openProp, {
+          duration: MOTION_TIME
+        });
+      } else {
+        jQuery.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            jQuery.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        jQuery.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 链接跳转
+  let newWindow = 'false'
+  if (newWindow === 'true') {
+    let links = document.querySelectorAll('.post-body a')
+    links.forEach(item => {
+      if (!item.classList.contains('btn')) {
+        item.setAttribute("target", "_blank");
+      }
+    })
+  }
+
+  let faSearch = document.querySelector('#fa_search');
+  faSearch && faSearch.addEventListener('click', function () {
+    document.querySelector('#search_mask').style = ''
+  })
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+  
+  // 离开当前页title变化
+  var leaveTitle = "";
+  var normal_title = document.title;
+  if (leaveTitle) {
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState == 'hidden') {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
+
+</script>
+
+<link rel="stylesheet" href="/media/css/jquery.fancybox.css" />
+<script src="/media/js/jquery.fancybox.js"></script>
+
+<script>
+  let images = document.querySelectorAll('.section img');
+  images.forEach(image => {
+    var parent = image.parentElement;
+    var next = image.nextElementSibling;
+    parent.removeChild(image);
+    var aelem = document.createElement('a');
+    aelem.href = image.src;
+    aelem.dataset['fancybox'] = 'images';
+    aelem.dataset['rel'] = 'fancybox-button';
+    aelem.classList.add('fancybox');
+    aelem.appendChild(image);
+    parent.insertBefore(aelem, next);
+  })
+</script>
+
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+          
+        </div>
+      </div>
+      <p class="reward-word">扫码打赏，你说多少就多少</p>
+      <p class="reward-tip">打开微信扫一扫，即可进行扫码打赏哦</p>
+    </div>
+    <div class="bottom">
+      
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        jQuery.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        jQuery.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        jQuery.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        jQuery.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      jQuery.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      jQuery.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
+  </div>
+</body>
+
+<div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://wmyme.github.io/post/zheng/"" data-c="
+          &lt;h2 id=&#34;1元字符&#34;&gt;1.元字符&lt;/h2&gt;
+&lt;p&gt;万物皆有缘，正则也是如此，元字符是构造正则表达式的一种基本元素。&lt;br&gt;
+我们先来记几个常用的元字符：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;元字符&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;.&lt;/td&gt;
+&lt;td&gt;匹配除换行符以外的任意字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;\w&lt;/td&gt;
+&lt;td&gt;匹配单词字符(字母或数字或下划线或汉字)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;\s&lt;/td&gt;
+&lt;td&gt;匹配任意的空白符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;\d&lt;/td&gt;
+&lt;td&gt;匹配数字       &lt;font color=&#39;red&#39;&gt;等同于[0-9]&lt;/font&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;\b&lt;/td&gt;
+&lt;td&gt;匹配单词的开始或结束&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;^&lt;/td&gt;
+&lt;td&gt;匹配字符串的开始&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$&lt;/td&gt;
+&lt;td&gt;匹配字符串的结束&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;\D&lt;/td&gt;
+&lt;td&gt;非数字字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;\W&lt;/td&gt;
+&lt;td&gt;非单词字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;\S&lt;/td&gt;
+&lt;td&gt;非空白字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;有了元字符之后，我们就可以利用这些元字符来写一些简单的正则表达式了，&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;匹配有abc开头的字符串：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt; \babc或者^abc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;匹配8位数字的QQ号码：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt; ^\d\d\d\d\d\d\d\d$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;匹配1开头11位数字的手机号码：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;^1\d\d\d\d\d\d\d\d\d\d$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2-重复限定符&#34;&gt;2. 重复限定符&lt;/h2&gt;
+&lt;p&gt;有了元字符就可以写不少的正则表达式了，但细心的你们可能会发现：别人写的正则简洁明了，而不理君写的正则一堆乱七八糟而且重复的元字符组成的。正则没提供办法处理这些重复的元字符吗？&lt;/p&gt;
+&lt;p&gt;答案是有的！&lt;br&gt;
+为了处理这些重复问题，正则表达式中一些重复限定符，把重复部分用合适的限定符替代，下面我们来看一些限定符：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;代码/语法&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;*&lt;/td&gt;
+&lt;td&gt;重复0次或n次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;重复一次或n次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;重复0次或一次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;{n}&lt;/td&gt;
+&lt;td&gt;重复n次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;{n,}&lt;/td&gt;
+&lt;td&gt;重复n次或更多次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;{n,m}&lt;/td&gt;
+&lt;td&gt;重复n到m次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;3-分组&#34;&gt;3. 分组&lt;/h2&gt;
+&lt;p&gt;从上面的例子（4）中看到，&lt;em&gt;限定符是作用在与他左边最近的一个字符，那么问题来了，如果我想要ab同时被&lt;/em&gt;限定那怎么办呢？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;正则表达式中用小括号&lt;font color=&#39;red&#39;&gt;( )&lt;/font&gt;来做分组，也就是括号中的内容作为一个整体。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;代码/语法&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;( )&lt;/td&gt;
+&lt;td&gt;将括号内的内容作为一个整体匹配&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;因此当我们要匹配多个ab时，我们可以这样&lt;br&gt;
+如：匹配字符串中包含0到多个ab开头：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt; (ab)*
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;4-转义&#34;&gt;4. 转义&lt;/h2&gt;
+&lt;p&gt;我们看到正则表达式用小括号来做分组，那么问题来了：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果要匹配的字符串中本身就包含小括号，那是不是冲突？应该怎么办？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;针对这种情况，正则提供了转义的方式，也就是要把这些元字符、限定符或者关键字转义成普通的字符，做法很简答，就是在要转义的字符前面加个斜杠，也就是\即可。&lt;br&gt;
+如：要匹配以(ab)开头：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   ^(\(ab\))*
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;5-条件或&#34;&gt;5. 条件或&lt;/h2&gt;
+&lt;p&gt;回到我们刚才的手机号匹配，我们都知道：国内号码都来自三大网，它们都有属于自己的号段，比如联通有130/131/132/155/156/185/186/145/176等号段，假如让我们匹配一个联通的号码，那按照我们目前所学到的正则，应该无从下手的，因为这里包含了一些并列的条件，也就是“或”，那么在正则中是如何表示“或”的呢？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;正则用符号 | 来表示或，也叫做分支条件，当满足正则里的分支条件的任何一种条件时，都会当成是匹配成功。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;那么我们就可以用或条件来处理这个问题&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   ^(130|131|132|155|156|185|186|145|176)\d{8}$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;6-区间&#34;&gt;6. 区间&lt;/h2&gt;
+&lt;p&gt;看到上面的例子，是不是看到有什么规律？是不是还有一种想要简化的冲动？&lt;br&gt;
+实际是有的&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;正则提供一个元字符中括号 [] 来表示区间条件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;代码/语法&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;font color=&#39;red&#39;&gt;[ ]&lt;/font&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;要求匹配的字符只能取自其中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[0-9]&lt;/td&gt;
+&lt;td&gt;代表所有数字&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[A-Z]&lt;/td&gt;
+&lt;td&gt;代表所有大写字母&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[a-z]&lt;/td&gt;
+&lt;td&gt;代表所有小写字母&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[A-Za-z]&lt;/td&gt;
+&lt;td&gt;代表所有字母&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[A-Za-z0-9]&lt;/td&gt;
+&lt;td&gt;代表所有字母和数字&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;font color=&#39;red&#39;&gt;[^]&lt;/font&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;要求匹配除^后列出的字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[^0-9]&lt;/td&gt;
+&lt;td&gt;代表所有非数字字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;正则进阶知识点&#34;&gt;&lt;strong&gt;正则进阶知识点：&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;1-零宽断言&#34;&gt;&lt;strong&gt;1. 零宽断言&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;无论是零宽还是断言，听起来都古古怪怪的，&lt;br&gt;
+那先解释一下这两个词。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;断言：俗话的断言就是“我断定什么什么”，而正则中的断言，就是说正则可以指明在指定的内容的前面或后面会出现满足指定规则的内容，&lt;br&gt;
+意思正则也可以像人类那样断定什么什么，比如&amp;quot;ss1aa2bb3&amp;quot;,正则可以用断言找出aa2前面有bb3，也可以找出aa2后面有ss1.&lt;/li&gt;
+&lt;li&gt;零宽：就是没有宽度，在正则中，断言只是匹配位置，不占字符，也就是说，匹配结果里是不会返回断言本身。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;意思是讲明白了，那他有什么用呢？&lt;br&gt;
+我们来举个栗子：&lt;br&gt;
+假设我们要用爬虫抓取csdn里的文章阅读量。通过查看源代码可以看到文章阅读量这个内容是这样的结构&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;quot;&amp;lt;span class=&amp;quot;read-count&amp;quot;&amp;gt;阅读数：641&amp;lt;/span&amp;gt;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中也就‘641’这个是变量，也就是说不同文章不同的值，当我们拿到这个字符串时，需要获得这里边的‘641’有很多种办法，但如果正则应该怎么匹配呢？&lt;/p&gt;
+&lt;p&gt;下面先来讲几种类型的断言：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;正向先行断言（正前瞻）：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;语法：（?=pattern）&lt;/li&gt;
+&lt;li&gt;作用：匹配pattern表达式的前面内容，不返回本身。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这样子说，还是一脸懵逼，好吧，回归刚才那个栗子，要取到阅读量，在正则表达式中就意味着要能匹配到‘&lt;/span&gt;’前面的数字内容&lt;br&gt;
+按照上所说的正向先行断言可以匹配表达式前面的内容，那意思就是:(?=&lt;/span&gt;) 就可以匹配到前面的内容了。&lt;br&gt;
+匹配什么内容呢？如果要所有内容那就是：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    String reg=&amp;quot;.+(?=&amp;lt;/span&amp;gt;)&amp;quot;;
+ 
+    String test = &amp;quot;&amp;lt;span class=\&amp;quot;read-count\&amp;quot;&amp;gt;阅读数：641&amp;lt;/span&amp;gt;&amp;quot;;
+    Pattern pattern = Pattern.compile(reg);
+    Matcher mc=    pattern.matcher(test);
+    while(mc.find()){
+     System.out.println(&amp;quot;匹配结果：&amp;quot;)
+     System.out.println(mc.group());
+    }
+
+   //匹配结果：
+  //&amp;lt;span class=&amp;quot;read-count&amp;quot;&amp;gt;阅读数：641
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可是老哥我们要的只是前面的数字呀，那也简单咯，匹配数字 \d,那可以改成：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   String reg=&amp;quot;\\d+(?=&amp;lt;/span&amp;gt;)&amp;quot;;
+   String test = &amp;quot;&amp;lt;span class=\&amp;quot;read-count\&amp;quot;&amp;gt;阅读数：641&amp;lt;/span&amp;gt;&amp;quot;;
+   Pattern pattern = Pattern.compile(reg);
+   Matcher mc=    pattern.matcher(test);
+   while(mc.find()){
+     System.out.println(mc.group());
+   }
+  //匹配结果：
+  //641
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;大功告成！&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;正向后行断言（正后顾）:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;语法：（?&amp;lt;=pattern）&lt;/li&gt;
+&lt;li&gt;作用：匹配pattern表达式的后面的内容，不返回本身。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有先行就有后行，先行是匹配前面的内容，那后行就是匹配后面的内容啦。&lt;br&gt;
+上面的栗子，我们也可以用后行断言来处理.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    //(?&amp;lt;=&amp;lt;span class=&amp;quot;read-count&amp;quot;&amp;gt;阅读数：)\d+
+    String reg=&amp;quot;(?&amp;lt;=&amp;lt;span class=\&amp;quot;read-count\&amp;quot;&amp;gt;阅读数：)\\d+&amp;quot;;
+ 
+    String test = &amp;quot;&amp;lt;span class=\&amp;quot;read-count\&amp;quot;&amp;gt;阅读数：641&amp;lt;/span&amp;gt;&amp;quot;;
+    Pattern pattern = Pattern.compile(reg);
+    Matcher mc=    pattern.matcher(test);
+         while(mc.find()){
+           System.out.println(mc.group());
+         }
+   //匹配结果：
+   //641
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;就这么简单。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;负向先行断言（负前瞻）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;语法：(?!pattern)&lt;/li&gt;
+&lt;li&gt;作用：匹配非pattern表达式的前面内容，不返回本身。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有正向也有负向，负向在这里其实就是非的意思。&lt;br&gt;
+举个栗子：比如有一句 “我爱祖国，我是祖国的花朵”&lt;br&gt;
+现在要找到不是&#39;的花朵&#39;前面的祖国&lt;br&gt;
+用正则就可以这样写：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   祖国(?!的花朵)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;负向后行断言（负后顾）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;语法：(?&amp;lt;!pattern)&lt;/li&gt;
+&lt;li&gt;作用：匹配非pattern表达式的后面内容，不返回本身。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-捕获和非捕获&#34;&gt;&lt;strong&gt;2. 捕获和非捕获&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;单纯说到捕获，他的意思是匹配表达式，但捕获通常和分组联系在一起，也就是“捕获组”&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;捕获组：匹配子表达式的内容，把匹配结果保存到内存中中数字编号或显示命名的组里，以深度优先进行编号，之后可以通过序号或名称来使用这些匹配结果。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;而根据命名方式的不同，又可以分为两种组：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;数字编号捕获组：&lt;br&gt;
+语法：(exp)&lt;br&gt;
+解释：从表达式左侧开始，每出现一个左括号和它对应的右括号之间的内容为一个分组，在分组中，第0组为整个表达式，第一组开始为分组。&lt;br&gt;
+比如固定电话的：020-85653333&lt;br&gt;
+他的正则表达式为：(0\d{2})-(\d{8})&lt;br&gt;
+按照左括号的顺序，这个表达式有如下分组：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://wmyme.github.io/post-images/1636183562739.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;我们用Java来验证一下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    String test = &amp;quot;020-85653333&amp;quot;;
+    String reg=&amp;quot;(0\\d{2})-(\\d{8})&amp;quot;;
+    Pattern pattern = Pattern.compile(reg);
+    Matcher mc= pattern.matcher(test);
+    if(mc.find()){
+    System.out.println(&amp;quot;分组的个数有：&amp;quot;+mc.groupCount());
+        for(int i=0;i&amp;lt;=mc.groupCount();i++){
+            System.out.println(&amp;quot;第&amp;quot;+i+&amp;quot;个分组为：&amp;quot;+mc.group(i));
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出结果：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt; 分组的个数有：2
+ 第0个分组为：020-85653333
+ 第1个分组为：020
+ 第2个分组为：85653333
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可见，分组个数是2，但是因为第0个为整个表达式本身，因此也一起输出了。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;命名编号捕获组：&lt;br&gt;
+语法：(?&lt;name&gt;exp)&lt;br&gt;
+解释：分组的命名由表达式中的name指定&lt;br&gt;
+比如区号也可以这样写:(?&lt;quhao&gt;\0\d{2})-(?&lt;haoma&gt;\d{8})&lt;br&gt;
+按照左括号的顺序，这个表达式有如下分组：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;../../../images/v2-96796c22cd8306f6f0d7ad8204720166_720w.jpg&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;img src=&#34;../../../images/v2-96796c22cd8306f6f0d7ad8204720166_720w.jpg&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;用代码来验证一下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   String test = &amp;quot;020-85653333&amp;quot;;
+        String reg=&amp;quot;(?&amp;lt;quhao&amp;gt;0\\d{2})-(?&amp;lt;haoma&amp;gt;\\d{8})&amp;quot;;
+        Pattern pattern = Pattern.compile(reg);
+        Matcher mc= pattern.matcher(test);
+        if(mc.find()){
+            System.out.println(&amp;quot;分组的个数有：&amp;quot;+mc.groupCount());
+            System.out.println(mc.group(&amp;quot;quhao&amp;quot;));
+            System.out.println(mc.group(&amp;quot;haoma&amp;quot;));
+        }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出结果：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   分组的个数有：2
+   分组名称为:quhao,匹配内容为：020
+   分组名称为:haoma,匹配内容为：85653333
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;非捕获组：&lt;br&gt;
+语法：(?:exp)&lt;br&gt;
+解释：和捕获组刚好相反，它用来标识那些不需要捕获的分组，说的通俗一点，就是你可以根据需要去保存你的分组。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;比如上面的正则表达式，程序不需要用到第一个分组，那就可以这样写：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;1   (?:\0\d{2})-(\d{8})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;../../../images/v2-a875e9e70cd3bfc4457fece7e947edb9_720w.jpg&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;img src=&#34;../../../images/v2-a875e9e70cd3bfc4457fece7e947edb9_720w.jpg&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;验证一下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   String test = &amp;quot;020-85653333&amp;quot;;
+        String reg=&amp;quot;(?:0\\d{2})-(\\d{8})&amp;quot;;
+        Pattern pattern = Pattern.compile(reg);
+        Matcher mc= pattern.matcher(test);
+        if(mc.find()){
+                System.out.println(&amp;quot;分组的个数有：&amp;quot;+mc.groupCount());
+                for(int i=0;i&amp;lt;=mc.groupCount();i++){
+                    System.out.println(&amp;quot;第&amp;quot;+i+&amp;quot;个分组为：&amp;quot;+mc.group(i));
+                }
+        }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出结果：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   分组的个数有：1
+   第0个分组为：020-85653333
+   第1个分组为：85653333
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-反向引用&#34;&gt;&lt;strong&gt;3. 反向引用&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;上面讲到捕获，我们知道：&lt;em&gt;&lt;strong&gt;捕获会返回一个捕获组，这个分组是保存在内存中，不仅可以在正则表达式外部通过程序进行引用，也可以在正则表达式内部进行引用，这种引用方式就是反向引用&lt;/strong&gt;&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;根据捕获组的命名规则，反向引用可分为：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;数字编号组反向引用：\k&lt;br&gt;
+或\number&lt;/li&gt;
+&lt;li&gt;命名编号组反向引用：\k&lt;br&gt;
+或者&#39;name&#39;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;好了 讲完了，懂吗？不懂！！！&lt;br&gt;
+可能连前面讲的捕获有什么用都还不懂吧？&lt;br&gt;
+其实只是看完捕获不懂不会用是很正常的！&lt;br&gt;
+因为捕获组通常是和反向引用一起使用的&lt;/p&gt;
+&lt;p&gt;上面说到捕获组是匹配子表达式的内容按序号或者命名保存起来以便使用&lt;br&gt;
+注意两个字眼：“内容” 和 “使用”&lt;br&gt;
+这里所说的“内容”，是匹配结果，而不是子表达式本身，强调这个有什么用？嗯，先记住&lt;br&gt;
+那这里所说的“使用”是怎样使用呢？&lt;/p&gt;
+&lt;p&gt;因为它的作用主要是用来查找一些重复的内容或者做替换指定字符。&lt;/p&gt;
+&lt;p&gt;还是举栗子吧：&lt;br&gt;
+比如要查找一串字母&amp;quot;aabbbbgbddesddfiid&amp;quot;里成对的字母&lt;br&gt;
+如果按照我们之前学到的正则，什么区间啊限定啊断言啊可能是办不到的，&lt;br&gt;
+现在我们先用程序思维理一下思路：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1）匹配到一个字母&lt;/li&gt;
+&lt;li&gt;2）匹配第下一个字母，检查是否和上一个字母是否一样&lt;/li&gt;
+&lt;li&gt;3）如果一样，则匹配成功，否则失败&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这里的思路2中匹配下一个字母时，需要用到上一个字母，那怎么记住上一个字母呢？？？&lt;br&gt;
+这下子捕获就有用处啦，我们可以利用捕获把上一个匹配成功的内容用来作为本次匹配的条件&lt;br&gt;
+好了，有思路就要实践&lt;br&gt;
+首先匹配一个字母：\w&lt;br&gt;
+我们需要做成分组才能捕获，因此写成这样：(\w)&lt;/p&gt;
+&lt;p&gt;那这个表达式就有一个捕获组：（\w）&lt;br&gt;
+然后我们要用这个捕获组作为条件，那就可以：(\w)\1&lt;br&gt;
+这样就大功告成了&lt;br&gt;
+可能有人不明白了，\1是什么意思呢？&lt;br&gt;
+还记得捕获组有两种命名方式吗，&lt;strong&gt;一种是是根据捕获分组顺序命名，一种是自定义命名来作为捕获组的命名&lt;/strong&gt;&lt;br&gt;
+*&lt;strong&gt;在默认情况下都是以数字来命名，而且数字命名的顺序是从1开始的*&lt;/strong&gt;&lt;br&gt;
+因此要引用第一个捕获组，根据反向引用的数字命名规则 就需要 \k&amp;lt;1&amp;gt;或者\1&lt;br&gt;
+当然，通常都是是后者。&lt;br&gt;
+我们来测试一下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   String test = &amp;quot;aabbbbgbddesddfiid&amp;quot;;
+        Pattern pattern = Pattern.compile(&amp;quot;(\\w)\\1&amp;quot;);
+        Matcher mc= pattern.matcher(test);
+        while(mc.find()){
+            System.out.println(mc.group());
+
+        }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出结果：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   aa
+   bb
+   bb
+   dd
+   dd
+   ii
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;嗯，这就是我们想要的了。&lt;/p&gt;
+&lt;p&gt;在举个替换的例子，假如想要把字符串中abc换成a&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   String test = &amp;quot;abcbbabcbcgbddesddfiid&amp;quot;;
+   String reg=&amp;quot;(a)(b)c&amp;quot;;
+   System.out.println(test.replaceAll(reg, &amp;quot;$1&amp;quot;));;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出结果：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   abbabcgbddesddfiid
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;4-贪婪和非贪婪&#34;&gt;&lt;strong&gt;4. 贪婪和非贪婪&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;1.贪婪&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们都知道，贪婪就是不满足，尽可能多的要。&lt;br&gt;
+在正则中，贪婪也是差不多的意思:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;贪婪匹配：当正则表达式中包含能接受重复的限定符时，通常的行为是（在使整个表达式能得到匹配的前提下）匹配尽可能多的字符，这匹配方式叫做贪婪匹配。&lt;br&gt;
+特性：一次性读入整个字符串进行匹配，每当不匹配就舍弃最右边一个字符，继续匹配，依次匹配和舍弃（这种匹配-舍弃的方式也叫做回溯），直到匹配成功或者把整个字符串舍弃完为止，因此它是一种最大化的数据返回，能多不会少。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;前面我们讲过重复限定符，其实这些限定符就是贪婪量词，比如表达式：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;1   \d{3,6}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用来匹配3到6位数字，在这种情况下，它是一种贪婪模式的匹配，也就是假如字符串里有6个个数字可以匹配，那它就是全部匹配到。&lt;br&gt;
+如&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   String reg=&amp;quot;\\d{3,6}&amp;quot;;        
+   String test=&amp;quot;61762828 176 2991 871&amp;quot;;
+   System.out.println(&amp;quot;文本：&amp;quot;+test);
+   System.out.println(&amp;quot;贪婪模式：&amp;quot;+reg);
+   Pattern p1 =Pattern.compile(reg);
+   Matcher m1 = p1.matcher(test);
+    while(m1.find()){
+      System.out.println(&amp;quot;匹配结果：&amp;quot;+m1.group(0));
+   }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出结果：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   文本：61762828 176 2991 44 871
+   贪婪模式：\d{3,6}
+   匹配结果：617628
+   匹配结果：176
+   匹配结果：2991
+   匹配结果：871
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;由结果可见：本来字符串中的“61762828”这一段，其实只需要出现3个（617）就已经匹配成功了的，但是他并不满足，而是匹配到了最大能匹配的字符，也就是6个。&lt;br&gt;
+一个量词就如此贪婪了，&lt;br&gt;
+那有人会问，如果多个贪婪量词凑在一起，那他们是如何支配自己的匹配权的呢？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;是这样的，多个贪婪在一起时，如果字符串能满足他们各自最大程度的匹配时，就互不干扰，但如果不能满足时，会根据深度优先原则，也就是从左到右的每一个贪婪量词，优先最大数量的满足，剩余再分配下一个量词匹配。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   String reg=&amp;quot;(\\d{1,2})(\\d{3,4})&amp;quot;;        
+   String test=&amp;quot;61762828 176 2991 87321&amp;quot;;
+   System.out.println(&amp;quot;文本：&amp;quot;+test);
+   System.out.println(&amp;quot;贪婪模式：&amp;quot;+reg);
+   Pattern p1 =Pattern.compile(reg);
+   Matcher m1 = p1.matcher(test);
+    while(m1.find()){
+      System.out.println(&amp;quot;匹配结果：&amp;quot;+m1.group(0));
+     }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出结果：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   文本：61762828 176 2991 87321
+   贪婪模式：(\d{1,2})(\d{3,4})
+   匹配结果：617628
+   匹配结果：2991
+   匹配结果：87321
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;“617628” 是前面的\d{1,2}匹配出了61，后面的匹配出了7628&lt;/li&gt;
+&lt;li&gt;&amp;quot;2991&amp;quot; 是前面的\d{1,2}匹配出了29 ，后面的匹配出了91&lt;/li&gt;
+&lt;li&gt;&amp;quot;87321&amp;quot;是前面的\d{1,2}匹配出了87，后面的匹配出了321&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;2. 懒惰（非贪婪）&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;懒惰匹配：当正则表达式中包含能接受重复的限定符时，通常的行为是（在使整个表达式能得到匹配的前提下）匹配尽可能少的字符，这匹配方式叫做懒惰匹配。&lt;br&gt;
+特性：从左到右，从字符串的最左边开始匹配，每次试图不读入字符匹配，匹配成功，则完成匹配，否则读入一个字符再匹配，依此循环（读入字符、匹配）直到匹配成功或者把字符串的字符匹配完为止。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;懒惰量词是在贪婪量词后面加个“？”&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../../images/v2-7c7f10a4fdb67136e113611baab550d9_720w.jpg&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;img src=&#34;../../../images/v2-7c7f10a4fdb67136e113611baab550d9_720w.jpg&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   String reg=&amp;quot;(\\d{1,2}?)(\\d{3,4})&amp;quot;;        
+        String test=&amp;quot;61762828 176 2991 87321&amp;quot;;
+        System.out.println(&amp;quot;文本：&amp;quot;+test);
+        System.out.println(&amp;quot;贪婪模式：&amp;quot;+reg);
+        Pattern p1 =Pattern.compile(reg);
+        Matcher m1 = p1.matcher(test);
+        while(m1.find()){
+            System.out.println(&amp;quot;匹配结果：&amp;quot;+m1.group(0));
+        }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出结果：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;   文本：61762828 176 2991 87321
+   贪婪模式：(\d{1,2}?)(\d{3,4})
+   匹配结果：61762
+   匹配结果：2991
+   匹配结果：87321
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;解答：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“61762” 是左边的懒惰匹配出6，右边的贪婪匹配出1762&lt;br&gt;
+&amp;quot;2991&amp;quot;  是左边的懒惰匹配出2，右边的贪婪匹配出991&lt;br&gt;
+&amp;quot;87321&amp;quot; 左边的懒惰匹配出8，右边的贪婪匹配出7321&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;5-反义&#34;&gt;&lt;strong&gt;5. 反义&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;前面说到元字符的都是要匹配什么什么，当然如果你想反着来，不想匹配某些字符，正则也提供了一些常用的反义元字符：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../../images/v2-d7dae5a859d6851c8620108c83227390_720w.jpg&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;img src=&#34;../../../images/v2-d7dae5a859d6851c8620108c83227390_720w.jpg&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;正则进阶知识就讲到这里，正则是一门博大精深的语言，其实学会它的一些语法和知识点还算不太难，但想要做到真正学以致用能写出非常6的正则，还有很远的距离，只有真正对它感兴趣的，并且经常研究和使用它，才会渐渐的理解它的博大精深之处，我就带你们走到这，剩下的，靠自己啦。&lt;/p&gt;
+"> 正则表达式</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://wmyme.github.io/post/springboot-ji-cheng-sa-token-shi-li/"" data-c="
+          &lt;p&gt;本篇将带你从零开始集成Sa-Token，从而让你快速熟悉Sa-Token的使用姿势&lt;br&gt;
+整合示例在官方仓库的/sa-token-demo/sa-token-demo-springboot文件夹下，如遇到难点可结合源码进行测试学习&lt;/p&gt;
+&lt;p&gt;1、创建项目&lt;br&gt;
+在IDE中新建一个SpringBoot项目，例如：sa-token-demo-springboot（不会的同学请自行百度或者参考：SpringBoot-Pure）&lt;/p&gt;
+&lt;p&gt;2、添加依赖&lt;br&gt;
+在 pom.xml 中添加依赖：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;!-- Sa-Token 权限认证, 在线文档：http://sa-token.dev33.cn/ --&amp;gt;
+&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;cn.dev33&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;sa-token-spring-boot-starter&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;1.27.0&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;复制到剪贴板错误复制成功&lt;br&gt;
+3、设置配置文件&lt;br&gt;
+你可以零配置启动项目 ，但同时你也可以在application.yml中增加如下配置，定制性使用框架：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;server:
+    # 端口
+    port: 8081
+
+# Sa-Token配置
+sa-token: 
+    # token名称 (同时也是cookie名称)
+    token-name: satoken
+    # token有效期，单位s 默认30天, -1代表永不过期 
+    timeout: 2592000
+    # token临时有效期 (指定时间内无操作就视为token过期) 单位: 秒
+    activity-timeout: -1
+    # 是否允许同一账号并发登录 (为true时允许一起登录, 为false时新登录挤掉旧登录) 
+    is-concurrent: true
+    # 在多人登录同一账号时，是否共用一个token (为true时所有登录共用一个token, 为false时每次登录新建一个token) 
+    is-share: false
+    # token风格
+    token-style: uuid
+    # 是否输出操作日志 
+    is-log: false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果你习惯于 application.properties 类型的配置文件，那也很好办:&lt;br&gt;
+百度： &lt;a href=&#34;https://www.baidu.com/s?ie=UTF-8&amp;amp;wd=springboot%20properties%E4%B8%8Eyml%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E5%8C%BA%E5%88%AB&#34;&gt;springboot properties与yml 配置文件的区别&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;4、创建启动类&lt;br&gt;
+在项目中新建包 com.pj ，在此包内新建主类 SaTokenDemoApplication.java，输入以下代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@SpringBootApplication
+public class SaTokenDemoApplication {
+    public static void main(String[] args) throws JsonProcessingException {
+        SpringApplication.run(SaTokenDemoApplication.class, args);
+        System.out.println(&amp;quot;启动成功：Sa-Token配置如下：&amp;quot; + SaManager.getConfig());
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;复制到剪贴板错误复制成功&lt;br&gt;
+5、创建测试Controller&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@RestController
+@RequestMapping(&amp;quot;/user/&amp;quot;)
+public class UserController {
+
+    // 测试登录，浏览器访问： http://localhost:8081/user/doLogin?username=zhang&amp;amp;password=123456
+    @RequestMapping(&amp;quot;doLogin&amp;quot;)
+    public String doLogin(String username, String password) {
+        // 此处仅作模拟示例，真实项目需要从数据库中查询数据进行比对 
+        if(&amp;quot;zhang&amp;quot;.equals(username) &amp;amp;&amp;amp; &amp;quot;123456&amp;quot;.equals(password)) {
+            StpUtil.login(10001);
+            return &amp;quot;登录成功&amp;quot;;
+        }
+        return &amp;quot;登录失败&amp;quot;;
+    }
+
+    // 查询登录状态，浏览器访问： http://localhost:8081/user/isLogin
+    @RequestMapping(&amp;quot;isLogin&amp;quot;)
+    public String isLogin() {
+        return &amp;quot;当前会话是否登录：&amp;quot; + StpUtil.isLogin();
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;6、运行&lt;br&gt;
+启动代码，从浏览器依次访问上述测试接口：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oss.dev33.cn/sa-token/doc/test-do-login.png&#34; alt=&#34;avatar&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://oss.dev33.cn/sa-token/doc/test-is-login.png&#34; alt=&#34;avatar&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">SpringBoot 集成 Sa-Token 示例</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://wmyme.github.io/post/dayz-zui-xin-113-ban-ben-lu-dao-tu-pvepvp-wei-jia-mi-ban/"" data-c="
+          &lt;p&gt;DayZ独立版是一款自由的游戏，非官方中文译名僵尸末日 ，该游戏由Bohemia Interactive（波希米亚互动工作室） 研发，其中DayZ是DayZ Mod(DayZ模组) 的正式版，游戏于2013年12月17日发售。&lt;br&gt;
+游戏玩家需要在俄罗斯的Chernarus（又译作车臣尼亚）进行生存，而背景是一个由未知病毒感染全部人口变成为丧尸的大型大陆，作为一个幸存者，玩家必须通过获取食物、饮用水、武器以及医疗物资进行生存，游戏特点地图比较大，但是玩家必须避开或者和僵尸作战来生存，但充满丧尸的世界，最可怕的却不是僵尸，而是和你一样幸存下来的——人类。&lt;br&gt;
+鹿岛图1.13版本&lt;br&gt;
+天翼：https://cloud.189.cn/t/bEjmey7rMRZj（本体+mod）提取码：ktq8&lt;/p&gt;
+&lt;p&gt;百度：https://pan.baidu.com/s/1eD282KdQBypO3dhH1hg7tA  （本体+mod）提取码：TFW8&lt;/p&gt;
+&lt;p&gt;直接下载即可游玩，自行选择天翼或者百度下载。&lt;br&gt;
+（天翼无需会员高速下载！）&lt;/p&gt;
+&lt;p&gt;下载游戏本体解压后&lt;br&gt;
+stream中下载DayZServer&lt;br&gt;
+&lt;img src=&#34;https://wmyme.github.io/post-images/1632369242146.PNG&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wmyme.github.io/post-images/1632369246617.PNG&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+找到DayZServer安装目录创建一个txt文件，添加以下内容&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@echo off
+cls
+ 
+set version=1.0
+set wat=Dayz SA 
+ 
+title %wat% Watchdog
+ 
+ 
+cd D:\Asteam\steamapps\common\DayZServer
+ 
+:watchdog
+echo (%time%) %wat% started.
+start &amp;quot;Dayz_SA&amp;quot; /wait /affinity FF /high &amp;quot;DayZServer_x64.exe&amp;quot; -config=serverDZ.cfg
+echo (%time%) %wat% closed or crashed, restarting.
+goto watchdog
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;把txt文件后缀改为bat&lt;/p&gt;
+">DayZ最新1.13版本鹿岛图pve＋pvp未加密版</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://wmyme.github.io/post/share/"" data-c="
+          &lt;h2 id=&#34;影视资源&#34;&gt;影视资源&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://whykang.lanzoui.com/ikuA9sfc93c&#34;&gt;蓝魅 永久vip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://whykang.lanzoui.com/ihg5Yvunpsh&#34;&gt;八仟影视&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;##技术软件&lt;/p&gt;
+">软件分享</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://wmyme.github.io/post/shi-yong-ruan-jian/"" data-c="
+          &lt;p&gt;&lt;img src=&#34;https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fdb27ace1cbf6718c1d2bba9ad7ed8de33d4010ff.jpg&amp;amp;refer=http%3A%2F%2Fi0.hdslb.com&amp;amp;app=2002&amp;amp;size=f9999,10000&amp;amp;q=a80&amp;amp;n=0&amp;amp;g=0n&amp;amp;fmt=jpeg?sec=1631758408&amp;amp;t=5e0d07a80ddd6f1710e249bd838cca19&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+如果一个事物的内部包含另一个事物，那么这就是一个类内部包含另一个类。&lt;/p&gt;
+&lt;p&gt;例如：身体和心脏的关系。又如：汽车和发动机的关系。&lt;/p&gt;
+&lt;p&gt;分类：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;成员内部类&lt;/li&gt;
+&lt;li&gt;局部内部类（包含匿名内部类）成员内部类成员内部类的定义格式：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;修饰符 class 外部类名称 {    
+    修饰符 class 内部类名称 {        
+        // ...   
+   }   
+     // ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;注意：内用外，随意访问；外用内，需要内部类对象。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如何使用成员内部类？有两种方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;间接方式：在外部类的方法当中，使用内部类；然后main只是调用外部类的方法。&lt;/li&gt;
+&lt;li&gt;直接方式，公式：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;类名称 对象名 = new 类名称();&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;外部类名称.内部类名称 对象名 = new 外部类名称().new 内部类名称();&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;如果出现了重名现象，那么格式是：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;外部类名称.this.外部类成员变量名&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;局部内部类&lt;/p&gt;
+&lt;p&gt;如果一个类是定义在一个方法内部的，那么这就是一个局部内部类。&lt;br&gt;
+“局部”：只有当前所属的方法才能使用它，出了这个方法外面就不能用了。&lt;/p&gt;
+&lt;p&gt;定义格式：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;修饰符 class 外部类名称 {
+    修饰符 返回值类型 外部类方法名称(参数列表) {
+        class 局部内部类名称 {
+            // ...
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;小节一下类的权限修饰符：&lt;br&gt;
+&lt;code&gt;public &amp;gt; protected &amp;gt; (default) &amp;gt; private&lt;/code&gt;&lt;br&gt;
+定义一个类的时候，权限修饰符规则：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;外部类：&lt;strong&gt;public / (default)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;成员内部类：&lt;strong&gt;public / protected / (default) / private&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;局部内部类：&lt;strong&gt;什么都不能写&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;局部内部类，如果希望访问所在方法的局部变量，那么这个局部变量必须是有效final的。&lt;/p&gt;
+&lt;p&gt;备注：从Java 8+开始，只要局部变量事实不变，那么final关键字可以省略。&lt;/p&gt;
+&lt;p&gt;原因：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;new出来的对象在堆内存当中。&lt;/li&gt;
+&lt;li&gt;局部变量是跟着方法走的，在栈内存当中。&lt;/li&gt;
+&lt;li&gt;方法运行结束之后，立刻出栈，局部变量就会立刻消失。&lt;/li&gt;
+&lt;li&gt;但是new出来的对象会在堆当中持续存在，直到垃圾回收消失。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;匿名内部类&lt;/p&gt;
+&lt;p&gt;如果接口的实现类（或者是父类的子类）只需要使用唯一的一次，&lt;br&gt;
+那么这种情况下就可以省略掉该类的定义，而改为使用匿名内部类。&lt;/p&gt;
+&lt;p&gt;匿名内部类的定义格式：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;接口名称 对象名 = new 接口名称() {
+    // 覆盖重写所有抽象方法
+}; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;对格式“new 接口名称() {...}”进行解析：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;new代表创建对象的动作&lt;/li&gt;
+&lt;li&gt;接口名称就是匿名内部类需要实现哪个接口&lt;/li&gt;
+&lt;li&gt;{...}这才是匿名内部类的内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;另外还要注意几点问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;匿名内部类，在【创建对象】的时候，只能使用唯一一次。&lt;br&gt;
+如果希望多次创建对象，而且类的内容一样的话，那么就需要使用单独定义的实现类了。&lt;/li&gt;
+&lt;li&gt;匿名对象，在【调用方法】的时候，只能调用唯一一次。&lt;br&gt;
+如果希望同一个对象，调用多次方法，那么必须给对象起个名字。&lt;/li&gt;
+&lt;li&gt;匿名内部类是省略了【实现类/子类名称】，但是匿名对象是省略了【对象名称】&lt;br&gt;
+强调：匿名内部类和匿名对象不是一回事！！！&lt;/li&gt;
+&lt;/ol&gt;
+">内部类</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://wmyme.github.io/post/spring-boot-ji-cheng-mybatis-fen-ye-cha-jian/"" data-c="
+          &lt;h3 id=&#34;1引入依赖&#34;&gt;1.引入依赖&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;!-- 分页插件pagehelper --&amp;gt;
+&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;com.github.pagehelper&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;pagehelper&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;5.1.10&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;com.github.pagehelper&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;pagehelper-spring-boot-autoconfigure&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;1.2.3&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;com.github.pagehelper&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;pagehelper-spring-boot-starter&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;1.2.3&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&amp;lt;!-- 分页插件pagehelper --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;2配置applicationyml文件&#34;&gt;2.配置application.yml文件&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt; pagehelper 是一级根目录和 spring 同级&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;#配置分页插件pagehelper
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;properties&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-properties&#34;&gt;######### 分页插件 ##########
+pagehelper.helper-dialect=mysql
+pagehelper.params=count=countSql
+pagehelper.reasonable=false
+pagehelper.support-methods-arguments=true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3mapper接口&#34;&gt;3.mapper接口&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//使用PageHelper分页数据
+List&amp;lt;Students&amp;gt; queryAllByLimit();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;4mapperxml&#34;&gt;4.mapper.xml&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;!--查询所有--&amp;gt;
+&amp;lt;select id=&amp;quot;queryAllByLimit&amp;quot; resultType=&amp;quot;com.wmy.domain.Students&amp;quot;&amp;gt;
+    select * from students order by id
+&amp;lt;/select&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;5service文件&#34;&gt;5.service文件&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;/**
+ * 查询多条数据
+ *
+ * @return 对象列表
+ */
+List&amp;lt;Students&amp;gt; queryAllByLimit(Integer page, Integer size);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;6serviceimpl文件&#34;&gt;6.serviceimpl文件&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;/**
+     * 分页查询全部数据
+     *@param pageNum 第几页， 从1开始
+     *@param pageSize: 一页中有多少行数据
+     * @return 对象列表
+     */
+@Override
+public List&amp;lt;Students&amp;gt; queryAllByLimit(Integer pageNum, Integer pageSize) {
+    PageHelper.startPage(pageNum,pageSize);
+    return this.studentsMapper.queryAllByLimit();
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;7controller文件&#34;&gt;7.controller文件&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@GetMapping(&amp;quot;selectAll&amp;quot;)
+public ResponseResult selectAll(Integer pageNum,Integer pageSize){
+    List&amp;lt;Students&amp;gt; students = studentsService.queryAllByLimit(pageNum, pageSize);
+    PageInfo&amp;lt;Students&amp;gt; studentsPageInfo = new PageInfo&amp;lt;Students&amp;gt;(students);
+    return ResponseResult.succeed(studentsPageInfo);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;PageInfo的成员变量&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//当前页
+private int pageNum;
+//每页的数量
+private int pageSize;
+//当前页的数量
+private int size;
+//由于startRow和endRow不常用，这里说个具体的用法
+//可以在页面中&amp;quot;显示startRow到endRow 共size条数据&amp;quot;
+
+//当前页面第一个元素在数据库中的行号
+private int startRow;
+//当前页面最后一个元素在数据库中的行号
+private int endRow;
+//总记录数
+private long total;
+//总页数
+private int pages;
+//结果集
+private List&amp;lt;T&amp;gt; list;
+
+//第一页
+private int firstPage;
+//前一页
+private int prePage;
+
+//是否为第一页
+private boolean isFirstPage = false;
+//是否为最后一页
+private boolean isLastPage = false;
+//是否有前一页
+private boolean hasPreviousPage = false;
+//是否有下一页
+private boolean hasNextPage = false;
+//导航页码数
+private int navigatePages;
+//所有导航页号
+private int[] navigatepageNums;
+&lt;/code&gt;&lt;/pre&gt;
+"> spring boot集成mybatis分页插件</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://wmyme.github.io/post/gridea-zai-wang-zhan-di-bu-tian-jia-wang-zhan-yun-xing-shi-jian/"" data-c="
+          &lt;p&gt;找到模板源码中的script.ejs文件以fly主题为例&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://wmyme.github.io/post-images/1628851716261.PNG&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;打开将其中的vue代码替换为&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var app = new Vue({
+    el: &#39;#app&#39;,
+    data: {
+      menuVisible: false,
+      runTime: &amp;quot;&amp;quot;
+    },
+    methods: {
+      get() {
+        var date1 = new Date(this.$refs.time.innerText); //开始时间
+        var date2 = new Date(); //结束时间
+        var date3 = date2.getTime() - date1.getTime() //时间差的毫秒数
+        var days = Math.floor(date3 / (24 * 3600 * 1000)) // 计算出相差天数
+        //计算出小时数
+        var leave1 = date3 % (24 * 3600 * 1000) //计算天数后剩余的毫秒数
+        var hours = Math.floor(leave1 / (3600 * 1000))
+        //计算出相差分钟数
+        var leave2 = leave1 % (3600 * 1000) //计算小时数后剩余的毫秒数
+        var minutes = Math.floor(leave2 / (60 * 1000))
+        //计算出相差秒数
+        var leave3 = leave2 % (60 * 1000) //计算分钟数后剩余的毫秒数
+        var seconds = Math.round(leave3 / 1000)
+        this.runTime = &amp;quot; 已运行&amp;quot; + days + &amp;quot; 天 &amp;quot; + hours + &amp;quot; 小时 &amp;quot; + minutes + &amp;quot; 分钟 &amp;quot; + seconds + &amp;quot; 秒&amp;quot;;
+      }
+    },
+    mounted() {
+      setInterval(this.get, 1000);
+    },
+  })
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在主题的底部信息设置中添加下列代码&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://wmyme.github.io/post-images/1628851740469.PNG&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;span style=&amp;quot;display:none&amp;quot; ref=&#39;time&#39;&amp;gt;2021-08-11 00:00:00&amp;lt;/span&amp;gt;
+&amp;lt;!--以上是网站开始运行的时间--&amp;gt;
+&amp;lt;span v-html=&amp;quot;runTime&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在主题设置中保存，不然不会生效。&lt;/p&gt;
+&lt;p&gt;预览一下&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://wmyme.github.io/post-images/1628851750731.PNG&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">Gridea在网站底部添加网站运行时间</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://wmyme.github.io/post/js-shi-xian-wang-zhan-yun-xing-shi-jian-tong-ji/"" data-c="
+          &lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;&amp;lt;span id=&amp;quot;sitetime&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;script language=javascript&amp;gt;
+    function siteTime(){
+        window.setTimeout(&amp;quot;siteTime()&amp;quot;, 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth()+1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        var t1 = Date.UTC(2021,8,11,00,00,00); //北京时间2016-12-1 00:00:00
+        var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+        var diff = t2-t1;
+        var diffYears = Math.floor(diff/years);
+        var diffDays = Math.floor((diff/days)-diffYears*365);
+        var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+        var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+        var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+        document.getElementById(&amp;quot;sitetime&amp;quot;).innerHTML=&amp;quot; 已运行&amp;quot;+diffYears+&amp;quot;年 &amp;quot;+diffDays+&amp;quot; 天 &amp;quot;+diffHours+&amp;quot; 小时 &amp;quot;+diffMinutes+&amp;quot; 分钟 &amp;quot;+diffSeconds+&amp;quot; 秒&amp;quot;;
+    }
+    siteTime();
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+">js实现网站运行时间统计</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://wmyme.github.io/post/vue-jiao-shou-jia/"" data-c="
+          &lt;h2 id=&#34;脚手架文件结构&#34;&gt;脚手架文件结构&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;├── node_modules 
+├── public
+│   ├── favicon.ico: 页签图标
+│   └── index.html: 主页面
+├── src
+│   ├── assets: 存放静态资源
+│   │   └── logo.png
+│   │── component: 存放组件
+│   │   └── HelloWorld.vue
+│   │── App.vue: 汇总所有组件
+│   │── main.js: 入口文件
+├── .gitignore: git版本管制忽略的配置
+├── babel.config.js: babel的配置文件
+├── package.json: 应用包配置文件 
+├── README.md: 应用描述文件
+├── package-lock.json：包版本控制文件
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;关于不同版本的vue&#34;&gt;关于不同版本的Vue&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;vue.js与vue.runtime.xxx.js的区别：
+&lt;ol&gt;
+&lt;li&gt;vue.js是完整版的Vue，包含：核心功能 + 模板解析器。&lt;/li&gt;
+&lt;li&gt;vue.runtime.xxx.js是运行版的Vue，只包含：核心功能；没有模板解析器。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;因为vue.runtime.xxx.js没有模板解析器，所以不能使用template这个配置项，需要使用render函数接收到的createElement函数去指定具体内容。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;vueconfigjs配置文件&#34;&gt;vue.config.js配置文件&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;使用vue inspect &amp;gt; output.js可以查看到Vue脚手架的默认配置。&lt;/li&gt;
+&lt;li&gt;使用vue.config.js可以对脚手架进行个性化定制，详情见：https://cli.vuejs.org/zh&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;ref属性&#34;&gt;ref属性&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;被用来给元素或子组件注册引用信息（id的替代者）&lt;/li&gt;
+&lt;li&gt;应用在html标签上获取的是真实DOM元素，应用在组件标签上是组件实例对象（vc）&lt;/li&gt;
+&lt;li&gt;使用方式：
+&lt;ol&gt;
+&lt;li&gt;打标识：&lt;code&gt;&amp;lt;h1 ref=&amp;quot;xxx&amp;quot;&amp;gt;.....&amp;lt;/h1&amp;gt;&lt;/code&gt; 或 &lt;code&gt;&amp;lt;School ref=&amp;quot;xxx&amp;quot;&amp;gt;&amp;lt;/School&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;获取：&lt;code&gt;this.$refs.xxx&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;props配置项&#34;&gt;props配置项&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;功能：让组件接收外部传过来的数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;传递数据：&lt;code&gt;&amp;lt;Demo name=&amp;quot;xxx&amp;quot;/&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接收数据：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;第一种方式（只接收）：&lt;code&gt;props:[&#39;name&#39;]&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第二种方式（限制类型）：&lt;code&gt;props:{name:String}&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第三种方式（限制类型、限制必要性、指定默认值）：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;props:{
+	name:{
+	type:String, //类型
+	required:true, //必要性
+	default:&#39;老王&#39; //默认值
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;备注：props是只读的，Vue底层会监测你对props的修改，如果进行了修改，就会发出警告，若业务需求确实需要修改，那么请复制props的内容到data中一份，然后去修改data中的数据。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;mixin混入&#34;&gt;mixin(混入)&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;功能：可以把多个组件共用的配置提取成一个混入对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用方式：&lt;/p&gt;
+&lt;p&gt;第一步定义混合：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+    data(){....},
+    methods:{....}
+    ....
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;第二步使用混入：&lt;/p&gt;
+&lt;p&gt;​	全局混入：&lt;code&gt;Vue.mixin(xxx)&lt;/code&gt;&lt;br&gt;
+​	局部混入：&lt;code&gt;mixins:[&#39;xxx&#39;]&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;插件&#34;&gt;插件&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;功能：用于增强Vue&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;本质：包含install方法的一个对象，install的第一个参数是Vue，第二个以后的参数是插件使用者传递的数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;定义插件：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;对象.install = function (Vue, options) {
+    // 1. 添加全局过滤器
+    Vue.filter(....)
+
+    // 2. 添加全局指令
+    Vue.directive(....)
+
+
+    // 3. 配置全局混入(合)
+    Vue.mixin(....)
+
+    // 4. 添加实例方法
+    Vue.prototype.$myMethod = function () {...}
+    Vue.prototype.$myProperty = xxxx
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用插件：&lt;code&gt;Vue.use()&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;scoped样式&#34;&gt;scoped样式&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;作用：让样式在局部生效，防止冲突。&lt;/li&gt;
+&lt;li&gt;写法：&lt;code&gt;&amp;lt;style scoped&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+">Vue脚手架</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://wmyme.github.io/post/http/"" data-c="
+          &lt;h3 id=&#34;概念&#34;&gt;概念&lt;/h3&gt;
+&lt;p&gt;​	Hyper Text Transfer Protocol 超文本传输协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;传输协议：定义了，客户端和服务器端通信时，发送数据的格式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;特点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;基于TCP/IP的高级协议&lt;/li&gt;
+&lt;li&gt;默认端口号:80&lt;/li&gt;
+&lt;li&gt;基于请求/响应模型的:一次请求对应一次响应&lt;/li&gt;
+&lt;li&gt;无状态的：每次请求之间相互独立，不能交互数据&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;历史版本：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.0：每一次请求响应都会建立新的连接&lt;/li&gt;
+&lt;li&gt;1.1：复用连接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;请求消息数据格式&#34;&gt;请求消息数据格式&lt;/h3&gt;
+&lt;h4 id=&#34;1请求行&#34;&gt;1.请求行&lt;/h4&gt;
+&lt;p&gt;请求方式 请求url 请求协议/版本&lt;br&gt;
+GET /login.html	HTTP/1.1&lt;/p&gt;
+&lt;p&gt;请求方式：&lt;/p&gt;
+&lt;p&gt;HTTP协议有7中请求方式，常用的有2种&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;GET：&lt;/p&gt;
+&lt;p&gt;​	1.请求参数在请求行中，在url后。&lt;/p&gt;
+&lt;p&gt;​	2.请求的url长度有限制的&lt;/p&gt;
+&lt;p&gt;​	3.不太安全&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;POST：&lt;/p&gt;
+&lt;p&gt;​	1.请求参数在请求体中&lt;/p&gt;
+&lt;p&gt;​	2.请求的url长度没有限制的&lt;/p&gt;
+&lt;p&gt;​	3.相对安全&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2请求头&#34;&gt;2.请求头&lt;/h4&gt;
+&lt;p&gt;客户端浏览器告诉服务器一些信息&lt;/p&gt;
+&lt;p&gt;请求头名称: 请求头值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;常见的请求头：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;User-Agent：浏览器告诉服务器，我访问你使用的浏览器版本信息&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;可以在服务器端获取该头的信息，解决浏览器的兼容性问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Referer：http://localhost/login.html
+&lt;ul&gt;
+&lt;li&gt;告诉服务器，我(当前请求)从哪里来？&lt;br&gt;
+作用：&lt;br&gt;
+1. 防盗链：&lt;br&gt;
+2. 统计工作：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;3请求空行&#34;&gt;3.请求空行&lt;/h4&gt;
+&lt;p&gt;空行，就是用于分割POST请求的请求头，和请求体的。&lt;/p&gt;
+&lt;h4 id=&#34;4请求体正文&#34;&gt;4.请求体(正文)&lt;/h4&gt;
+&lt;p&gt;​		封装POST请求消息的请求参数的&lt;/p&gt;
+&lt;h4 id=&#34;5字符串格式&#34;&gt;5.字符串格式&lt;/h4&gt;
+&lt;p&gt;​	POST /login.html	HTTP/1.1&lt;br&gt;
+​	Host: localhost&lt;br&gt;
+​	User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0&lt;br&gt;
+​	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,&lt;em&gt;/&lt;/em&gt;;q=0.8&lt;br&gt;
+​	Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2&lt;br&gt;
+​	Accept-Encoding: gzip, deflate&lt;br&gt;
+​	Referer: http://localhost/login.html&lt;br&gt;
+​	Connection: keep-alive&lt;br&gt;
+​	Upgrade-Insecure-Requests: 1&lt;/p&gt;
+&lt;p&gt;​	username=zhangsan&lt;/p&gt;
+&lt;h3 id=&#34;响应消息数据格式&#34;&gt;响应消息数据格式&lt;/h3&gt;
+&lt;h2 id=&#34;request&#34;&gt;Request&lt;/h2&gt;
+&lt;h3 id=&#34;request和response的原理&#34;&gt;request和response的原理&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;request和response对象是由服务器创建的。我们来使用它们&lt;/li&gt;
+&lt;li&gt;request对象是来获取请求消息，response对象是来设置响应消息&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;request对象继承体系结构&#34;&gt;request对象继承体系结构&lt;/h3&gt;
+&lt;p&gt;ServletRequest		--	接口&lt;br&gt;
+|	继承&lt;br&gt;
+HttpServletRequest	-- 接口&lt;br&gt;
+|	实现&lt;br&gt;
+org.apache.catalina.connector.RequestFacade 类(tomcat)&lt;/p&gt;
+&lt;h3 id=&#34;request功能&#34;&gt;request功能&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;获取请求消息数据
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;获取请求行数据&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GET /day14/demo1?name=zhangsan HTTP/1.1&lt;/li&gt;
+&lt;li&gt;方法：
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;获取请求方式 ：GET&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;String getMethod()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(*)获取虚拟目录：/day14&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;String getContextPath()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取Servlet路径: /demo1&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;String getServletPath()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取get方式请求参数：name=zhangsan&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;String getQueryString()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(*)获取请求URI：/day14/demo1&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;String getRequestURI():		/day14/demo1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;StringBuffer getRequestURL()  :http://localhost/day14/demo1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;URL:统一资源定位符 ： http://localhost/day14/demo1	中华人民共和国&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;URI：统一资源标识符 : /day14/demo1					共和国&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取协议及版本：HTTP/1.1&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;String getProtocol()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取客户机的IP地址：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;String getRemoteAddr()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取请求头数据&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方法：
+&lt;ul&gt;
+&lt;li&gt;(*)String getHeader(String name):通过请求头的名称获取请求头的值&lt;/li&gt;
+&lt;li&gt;Enumeration&lt;String&gt; getHeaderNames():获取所有的请求头名称&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取请求体数据:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;请求体：只有POST请求方式，才有请求体，在请求体中封装了POST请求的请求参数&lt;/li&gt;
+&lt;li&gt;步骤：
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;获取流对象&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BufferedReader getReader()：获取字符输入流，只能操作字符数据&lt;/li&gt;
+&lt;li&gt;ServletInputStream getInputStream()：获取字节输入流，可以操作所有类型数据
+&lt;ul&gt;
+&lt;li&gt;在文件上传知识点后讲解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;再从流对象中拿数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;h3 id=&#34;其他功能&#34;&gt;其他功能&lt;/h3&gt;
+&lt;p&gt;​		1. 获取请求参数通用方式：不论get还是post请求方式都可以使用下列方法来获取请求参数&lt;/p&gt;
+&lt;p&gt;​				1. String getParameter(String name):根据参数名称获取参数值    username=zs&amp;amp;password=123&lt;br&gt;
+​				2. String[] getParameterValues(String name):根据参数名称获取参数值的数组  hobby=xx&amp;amp;hobby=game&lt;br&gt;
+​				3. Enumeration&lt;String&gt; getParameterNames():获取所有请求的参数名称&lt;br&gt;
+​				4. Map&amp;lt;String,String[]&amp;gt; getParameterMap():获取所有参数的map集合&lt;br&gt;
+​	&lt;br&gt;
+​			* 中文乱码问题：&lt;br&gt;
+​				* get方式：tomcat 8 已经将get方式乱码问题解决了&lt;br&gt;
+​				* post方式：会乱码&lt;br&gt;
+​					* 解决：在获取参数前，设置request的编码request.setCharacterEncoding(&amp;quot;utf-8&amp;quot;);&lt;/p&gt;
+&lt;p&gt;​			2. 请求转发：一种在服务器内部的资源跳转方式&lt;br&gt;
+​				1. 步骤：&lt;br&gt;
+​					1. 通过request对象获取请求转发器对象：RequestDispatcher getRequestDispatcher(String path)&lt;br&gt;
+​					2. 使用RequestDispatcher对象来进行转发：forward(ServletRequest request, ServletResponse response)&lt;br&gt;
+​	&lt;br&gt;
+​			2. 特点：&lt;br&gt;
+​				1. 浏览器地址栏路径不发生变化&lt;br&gt;
+​				2. 只能转发到当前服务器内部资源中。&lt;br&gt;
+​				3. 转发是一次请求&lt;/p&gt;
+">Http</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://wmyme.github.io/post/about/"" data-c="
+          &lt;blockquote&gt;
+&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;🏠 关于本站 ：基于Gridea搭建的静态个人博客&lt;/p&gt;
+&lt;p&gt;👨‍💻 博主是谁：ME&lt;/p&gt;
+&lt;p&gt;⛹ 兴趣爱好：&lt;/p&gt;
+&lt;p&gt;📬 联系我呀：2980214626@qq.com&lt;/p&gt;
+">关于</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://wmyme.github.io/post/hello-gridea/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;http://cdn.woc12138.com/profile2.jpg&#34; alt=&#34;profile-photo&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;健康快乐每一天&#34;&gt;健康快乐每一天&lt;/h2&gt;
+&lt;h1 id=&#34;webpack入门-学习总结&#34;&gt;Webpack入门-学习总结&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;http://cdn.woc12138.com/write.gif&#34; alt=&#34;icon&#34; loading=&#34;lazy&#34;&gt; 写于2020-07-16&lt;/p&gt;
+&lt;p&gt;所有的代码在&lt;a href=&#34;https://github.com/Woc12138/Webpack-study&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;一-webpack-简介&#34;&gt;一、Webpack 简介&lt;/h1&gt;
+&lt;h2 id=&#34;11-webpack-是什么&#34;&gt;1.1 webpack 是什么&lt;/h2&gt;
+&lt;p&gt;webpack 是一种&lt;strong&gt;前端资源构建工具&lt;/strong&gt;，一个静态模块打包器(module bundler)。&lt;/p&gt;
+&lt;p&gt;在webpack 看来, 前端的所有资源文件(js/json/css/img/less/...)都会作为模块处理。&lt;br&gt;
+它将根据模块的依赖关系进行静态分析，打包生成对应的静态资源(bundle)。&lt;/p&gt;
+&lt;h2 id=&#34;12-webpack-五个核心概念&#34;&gt;1.2 webpack 五个核心概念&lt;/h2&gt;
+&lt;h4 id=&#34;121-entry&#34;&gt;1.2.1 Entry&lt;/h4&gt;
+&lt;p&gt;入口(Entry)：指示 webpack 以哪个文件为入口起点开始打包，分析构建内部依赖图。&lt;/p&gt;
+&lt;h4 id=&#34;122-output&#34;&gt;1.2.2 Output&lt;/h4&gt;
+&lt;p&gt;输出(Output)：指示 webpack 打包后的资源 bundles 输出到哪里去，以及如何命名。&lt;/p&gt;
+&lt;h4 id=&#34;123-loader&#34;&gt;1.2.3 Loader&lt;/h4&gt;
+&lt;p&gt;Loader：让 webpack 能够去处理那些非 JS 的文件，比如样式文件、图片文件(webpack 自身只理解&lt;br&gt;
+JS)&lt;/p&gt;
+&lt;h4 id=&#34;124-plugins&#34;&gt;1.2.4 Plugins&lt;/h4&gt;
+&lt;p&gt;插件(Plugins)：可以用于执行范围更广的任务。插件的范围包括，从打包优化和压缩，&lt;br&gt;
+一直到重新定义环境中的变量等。&lt;/p&gt;
+&lt;h4 id=&#34;125-mode&#34;&gt;1.2.5 Mode&lt;/h4&gt;
+&lt;p&gt;模式(Mode)：指示 webpack 使用相应模式的配置。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;th&gt;特点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;development&lt;/td&gt;
+&lt;td&gt;会将 DefinePlugin 中 process.env.NODE_ENV 的值设置为 development。启用 NamedChunksPlugin 和 NamedModulesPlugin。&lt;/td&gt;
+&lt;td&gt;能让代码本地调试运行的环境&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;production&lt;/td&gt;
+&lt;td&gt;会将 DefinePlugin 中 process.env.NODE_ENV 的值设置为 production。启用 FlagDependencyUsagePlugin, FlagIncludedChunksPlugin, ModuleConcatenationPlugin, NoEmitOnErrorsPlugin, OccurrenceOrderPlugin, SideEffectsFlagPlugin 和 TerserPlugin。&lt;/td&gt;
+&lt;td&gt;能让代码优化上线运行的环境&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;二-webpack-初体验&#34;&gt;二、Webpack 初体验&lt;/h1&gt;
+&lt;h2 id=&#34;21-初始化配置&#34;&gt;2.1 初始化配置&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;初始化 package.json：npm init&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;下载安装webpack：(webpack4以上的版本需要全局/本地都安装webpack-cli)&lt;/p&gt;
+&lt;p&gt;全局安装：cnpm i webpack webpack-cli -g&lt;/p&gt;
+&lt;p&gt;本地安装：cnpm i webpack webpack-cli -D&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;22-编译打包应用&#34;&gt;2.2 编译打包应用&lt;/h2&gt;
+&lt;p&gt;创建 src 下的 js 等文件后，不需要配置 webpack.config.js 文件，在命令行就可以编译打包。&lt;/p&gt;
+&lt;p&gt;指令：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;开发环境：webpack ./src/index.js -o ./build/built.js --mode=development&lt;/p&gt;
+&lt;p&gt;webpack会以 ./src/index.js 为入口文件开始打包，打包后输出到 ./build/built.js 整体打包环境，是开发环境&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;生产环境：webpack ./src/index.js -o ./build/built.js --mode=production&lt;/p&gt;
+&lt;p&gt;webpack会以 ./src/index.js 为入口文件开始打包，打包后输出到 ./build/built.js 整体打包环境，是生产环境&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;结论：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;webpack 本身能处理 js/json 资源，不能处理 css/img 等其他资源&lt;/li&gt;
+&lt;li&gt;生产环境和开发环境将 ES6 模块化编译成浏览器能识别的模块化，但是不能处理 ES6 的基本语法转化为 ES5（需要借助 loader）&lt;/li&gt;
+&lt;li&gt;生产环境比开发环境多一个压缩 js 代码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;三-webpack-开发环境的基本配置&#34;&gt;三、Webpack 开发环境的基本配置&lt;/h1&gt;
+&lt;p&gt;webpack.config.js 是 webpack 的配置文件。&lt;/p&gt;
+&lt;p&gt;作用: 指示 webpack 干哪些活（当你运行 webpack 指令时，会加载里面的配置）&lt;/p&gt;
+&lt;p&gt;所有构建工具都是基于 nodejs 平台运行的，模块化默认采用 commonjs。&lt;/p&gt;
+&lt;p&gt;开发环境配置主要是为了能让代码运行。主要考虑以下几个方面：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;打包样式资源&lt;/li&gt;
+&lt;li&gt;打包 html 资源&lt;/li&gt;
+&lt;li&gt;打包图片资源&lt;/li&gt;
+&lt;li&gt;打包其他资源&lt;/li&gt;
+&lt;li&gt;devServer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面是一个简单的开发环境webpack.confg.js配置文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// resolve用来拼接绝对路径的方法
+const { resolve } = require(&#39;path&#39;)
+const HtmlWebpackPlugin = require(&#39;html-webpack-plugin&#39;) // 引用plugin
+
+module.exports = {
+  // webpack配置
+  entry: &#39;./src/js/index.js&#39;, // 入口起点
+  output: {
+    // 输出
+    // 输出文件名
+    filename: &#39;js/build.js&#39;,
+    // __dirname是nodejs的变量，代表当前文件的目录绝对路径
+    path: resolve(__dirname, &#39;build&#39;), // 输出路径，所有资源打包都会输出到这个文件夹下
+  },
+  // loader配置
+  module: {
+    rules: [
+      // 详细的loader配置
+      // 不同文件必须配置不同loader处理
+      {
+        // 匹配哪些文件
+        test: /\.less$/,
+        // 使用哪些loader进行处理
+        use: [
+          // use数组中loader执行顺序：从右到左，从下到上，依次执行(先执行css-loader)
+          // style-loader：创建style标签，将js中的样式资源插入进去，添加到head中生效
+          &#39;style-loader&#39;,
+          // css-loader：将css文件变成commonjs模块加载到js中，里面内容是样式字符串
+          &#39;css-loader&#39;,
+          // less-loader：将less文件编译成css文件，需要下载less-loader和less
+          &#39;less-loader&#39;
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [&#39;style-loader&#39;, &#39;css-loader&#39;],
+      },
+      {
+        // url-loader：处理图片资源，问题：默认处理不了html中的img图片
+        test: /\.(jpg|png|gif)$/,
+        // 需要下载 url-loader file-loader
+        loader: &#39;url-loader&#39;,
+        options: {
+          // 图片大小小于8kb，就会被base64处理，优点：减少请求数量（减轻服务器压力），缺点：图片体积会更大（文件请求速度更慢）
+          // base64在客户端本地解码所以会减少服务器压力，如果图片过大还采用base64编码会导致cpu调用率上升，网页加载时变卡
+          limit: 8 * 1024,
+          // 给图片重命名，[hash:10]：取图片的hash的前10位，[ext]：取文件原来扩展名
+          name: &#39;[hash:10].[ext]&#39;,
+          // 问题：因为url-loader默认使用es6模块化解析，而html-loader引入图片是conmonjs，解析时会出问题：[object Module]
+          // 解决：关闭url-loader的es6模块化，使用commonjs解析
+          esModule: false,
+          outputPath: &#39;imgs&#39;,
+        },
+      },
+      {
+        test: /\.html$/,
+        // 处理html文件的img图片（负责引入img，从而能被url-loader进行处理）
+        loader: &#39;html-loader&#39;,
+      },
+      // 打包其他资源(除了html/js/css资源以外的资源)
+      {
+        // 排除html|js|css|less|jpg|png|gif文件
+        exclude: /\.(html|js|css|less|jpg|png|gif)/,
+        // file-loader：处理其他文件
+        loader: &#39;file-loader&#39;,
+        options: {
+          name: &#39;[hash:10].[ext]&#39;,
+          outputPath: &#39;media&#39;,
+        },
+      },
+    ],
+  },
+  // plugin的配置
+  plugins: [
+    // html-webpack-plugin：默认会创建一个空的html文件，自动引入打包输出的所有资源（JS/CSS）
+    // 需要有结构的HTML文件可以加一个template
+    new HtmlWebpackPlugin({
+      // 复制这个./src/index.html文件，并自动引入打包输出的所有资源（JS/CSS）
+      template: &#39;./src/index.html&#39;,
+    }),
+  ],
+  // 模式
+  mode: &#39;development&#39;, // 开发模式
+  // 开发服务器 devServer：用来自动化，不用每次修改后都重新输入webpack打包一遍（自动编译，自动打开浏览器，自动刷新浏览器）
+  // 特点：只会在内存中编译打包，不会有任何输出（不会像之前那样在外面看到打包输出的build包，而是在内存中，关闭后会自动删除）
+  // 启动devServer指令为：npx webpack-dev-server
+  devServer: {
+    // 项目构建后路径
+    contentBase: resolve(__dirname, &#39;build&#39;),
+    // 启动gzip压缩
+    compress: true,
+    // 端口号
+    port: 3000,
+    // 自动打开浏览器
+    open: true,
+  },
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中，大部分配置都在注释中给出解释。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;运行项目的两个指令：&lt;br&gt;
+webpack 会将打包结果输出出去（build文件夹）&lt;br&gt;
+npx webpack-dev-server 只会在内存中编译打包，没有输出&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;loader 和 plugin 的不同：（plugin 一定要先引入才能使用）&lt;/p&gt;
+&lt;p&gt;loader：1. 下载 2. 使用（配置 loader）&lt;/p&gt;
+&lt;p&gt;plugins：1.下载 2. 引入 3. 使用&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;四-webpack-生产环境的基本配置&#34;&gt;四、Webpack 生产环境的基本配置&lt;/h1&gt;
+&lt;p&gt;而生产环境的配置需要考虑以下几个方面：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提取 css 成单独文件&lt;/li&gt;
+&lt;li&gt;css 兼容性处理&lt;/li&gt;
+&lt;li&gt;压缩 css&lt;/li&gt;
+&lt;li&gt;js 语法检查&lt;/li&gt;
+&lt;li&gt;js 兼容性处理&lt;/li&gt;
+&lt;li&gt;js 压缩&lt;/li&gt;
+&lt;li&gt;html 压缩&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面是一个基本的生产环境下的webpack.config.js配置&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const { resolve } = require(&#39;path&#39;)
+const MiniCssExtractorPlugin = require(&#39;mini-css-extract-plugin&#39;)
+const OptimiziCssAssetsWebpackPlugin = require(&#39;optimizi-css-assets-webpack-plugin&#39;)
+const HtmlWebpackPlugin = require(&#39;html-webpack-plugin&#39;)
+
+// 定义node.js的环境变量，决定使用browserslist的哪个环境
+process.env.NODE_ENV = &#39;production&#39;
+
+// 复用loader的写法
+const commonCssLoader = [
+  // 这个loader取代style-loader。作用：提取js中的css成单独文件然后通过link加载
+  MiniCssExtractPlugin.loader,
+  // css-loader：将css文件整合到js文件中
+  // 经过css-loader处理后，样式文件是在js文件中的
+  // 问题：1.js文件体积会很大2.需要先加载js再动态创建style标签，样式渲染速度就慢，会出现闪屏现象
+  // 解决：用MiniCssExtractPlugin.loader替代style-loader
+  &#39;css-loader&#39;,
+  /*
+    postcss-loader：css兼容性处理：postcss --&amp;gt; 需要安装：postcss-loader postcss-preset-env
+    postcss需要通过package.json中browserslist里面的配置加载指定的css兼容性样式
+    在package.json中定义browserslist：
+    &amp;quot;browserslist&amp;quot;: {
+      // 开发环境 --&amp;gt; 设置node环境变量：process.env.NODE_ENV = development
+      &amp;quot;development&amp;quot;: [ // 只需要可以运行即可
+        &amp;quot;last 1 chrome version&amp;quot;,
+        &amp;quot;last 1 firefox version&amp;quot;,
+        &amp;quot;last 1 safari version&amp;quot;
+      ],
+      // 生产环境。默认是生产环境
+      &amp;quot;production&amp;quot;: [ // 需要满足绝大多数浏览器的兼容
+        &amp;quot;&amp;gt;0.2%&amp;quot;,
+        &amp;quot;not dead&amp;quot;,
+        &amp;quot;not op_mini all&amp;quot;
+      ]
+    },
+  */
+  {
+    loader: &#39;postcss-loader&#39;,
+    options: {
+      ident: &#39;postcss&#39;, // 基本写法
+      plugins: () =&amp;gt; [
+        // postcss的插件
+        require(&#39;postcss-preset-env&#39;)(),
+      ],
+    },
+  },
+]
+
+module.exports = {
+  entry: &#39;./src/js/index.js&#39;,
+  output: {
+    filename: &#39;js/built.js&#39;,
+    path: resolve(__dirname, &#39;build&#39;),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [...commonCssLoader],
+      },
+      {
+        test: /\.less$/,
+        use: [...commonCssLoader, &#39;less-loader&#39;],
+      },
+      /*
+        正常来讲，一个文件只能被一个loader处理
+        当一个文件要被多个loader处理，那么一定要指定loader执行的先后顺序
+        先执行eslint再执行babel（用enforce）
+      */
+      {
+        /*
+          js的语法检查： 需要下载 eslint-loader eslint
+          注意：只检查自己写的源代码，第三方的库是不用检查的
+          airbnb(一个流行的js风格) --&amp;gt; 需要下载 eslint-config-airbnb-base eslint-plugin-import
+          设置检查规则：
+            package.json中eslintConfig中设置
+              &amp;quot;eslintConfig&amp;quot;: {
+                &amp;quot;extends&amp;quot;: &amp;quot;airbnb-base&amp;quot;， // 继承airbnb的风格规范
+                &amp;quot;env&amp;quot;: {
+                  &amp;quot;browser&amp;quot;: true // 可以使用浏览器中的全局变量(使用window不会报错)
+                }
+              }
+        */
+        test: /\.js$/,
+        exclude: /node_modules/, // 忽略node_modules
+        enforce: &#39;pre&#39;, // 优先执行
+        loader: &#39;eslint-loader&#39;,
+        options: {
+          // 自动修复
+          fix: true,
+        },
+      },
+      /*
+        js兼容性处理：需要下载 babel-loader @babel/core
+          1. 基本js兼容性处理 --&amp;gt; @babel/preset-env
+            问题：只能转换基本语法，如promise高级语法不能转换
+          2. 全部js兼容性处理 --&amp;gt; @babel/polyfill
+            问题：只要解决部分兼容性问题，但是将所有兼容性代码全部引入，体积太大了
+          3. 需要做兼容性处理的就做：按需加载  --&amp;gt; core-js
+      */
+      {
+        // 第三种方式：按需加载
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: &#39;babel-loader&#39;,
+        options: {
+          // 预设：指示babel做怎样的兼容性处理
+          presets: [
+            &#39;@babel/preset-env&#39;, // 基本预设
+            {
+              useBuiltIns: &#39;usage&#39;, //按需加载
+              corejs: { version: 3 }, // 指定core-js版本
+              targets: { // 指定兼容到什么版本的浏览器
+                chrome: &#39;60&#39;,
+                firefox: &#39;50&#39;,
+                ie: &#39;9&#39;,
+                safari: &#39;10&#39;,
+                edge: &#39;17&#39;
+              },
+            },
+          ],
+        },
+      },
+      {
+        // 图片处理
+        test: /\.(jpg|png|gif)/,
+        loader: &#39;url-loader&#39;,
+        options: {
+          limit: 8 * 1024,
+          name: &#39;[hash:10].[ext]&#39;,
+          outputPath: &#39;imgs&#39;,
+          esModule: false, // 关闭url-loader默认使用的es6模块化解析
+        },
+      },
+      // html中的图片处理
+      {
+        test: /\.html$/,
+        loader: &#39;html-loader&#39;,
+      },
+      // 处理其他文件
+      {
+        exclude: /\.(js|css|less|html|jpg|png|gif)/,
+        loader: &#39;file-loader&#39;,
+        options: {
+          outputPath: &#39;media&#39;,
+        },
+      },
+    ],
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      // 对输出的css文件进行重命名
+      filename: &#39;css/built.css&#39;,
+    }),
+    // 压缩css
+    new OptimiziCssAssetsWebpackPlugin(),
+    // HtmlWebpackPlugin：html文件的打包和压缩处理
+    // 通过这个插件会自动将单独打包的样式文件通过link标签引入
+    new HtmlWebpackPlugin({
+      template: &#39;./src/index.html&#39;,
+      // 压缩html代码
+      minify: {
+        // 移除空格
+        collapseWhitespace: true,
+        // 移除注释
+        removeComments: true,
+      },
+    }),
+  ],
+  // 生产环境下会自动压缩js代码
+  mode: &#39;production&#39;,
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;五-webpack-优化配置&#34;&gt;五、Webpack 优化配置&lt;/h1&gt;
+&lt;h2 id=&#34;51-开发环境性能优化&#34;&gt;5.1 开发环境性能优化&lt;/h2&gt;
+&lt;h3 id=&#34;511-hmr模块热替换&#34;&gt;5.1.1 HMR（模块热替换）&lt;/h3&gt;
+&lt;p&gt;HMR: hot module replacement 热模块替换 / 模块热替换&lt;/p&gt;
+&lt;p&gt;作用：一个模块发生变化，只会重新打包构建这一个模块（而不是打包所有模块） ，极大提升构建速度&lt;/p&gt;
+&lt;p&gt;代码：只需要在 devServer 中设置 hot 为 true，就会自动开启HMR功能（只能在开发模式下使用）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;devServer: {
+  contentBase: resolve(__dirname, &#39;build&#39;),
+  compress: true,
+  port: 3000,
+  open: true,
+  // 开启HMR功能
+  // 当修改了webpack配置，新配置要想生效，必须重启webpack服务
+  hot: true
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;每种文件实现热模块替换的情况：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;样式文件：可以使用HMR功能，因为开发环境下使用的 style-loader 内部默认实现了热模块替换功能&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;js 文件：默认不能使用HMR功能（修改一个 js 模块所有 js 模块都会刷新）&lt;/p&gt;
+&lt;p&gt;--&amp;gt; 实现 HMR 需要修改 js 代码（添加支持 HMR 功能的代码）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 绑定
+if (module.hot) {
+  // 一旦 module.hot 为true，说明开启了HMR功能。 --&amp;gt; 让HMR功能代码生效
+  module.hot.accept(&#39;./print.js&#39;, function() {
+    // 方法会监听 print.js 文件的变化，一旦发生变化，只有这个模块会重新打包构建，其他模块不会。
+    // 会执行后面的回调函数
+    print();
+  });
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意：HMR 功能对 js 的处理，只能处理非入口 js 文件的其他文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;html 文件: 默认不能使用 HMR 功能（html 不用做 HMR 功能，因为只有一个 html 文件，不需要再优化）&lt;/p&gt;
+&lt;p&gt;使用 HMR 会导致问题：html 文件不能热更新了（不会自动打包构建）&lt;/p&gt;
+&lt;p&gt;解决：修改 entry 入口，将 html 文件引入（这样 html 修改整体刷新）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;entry: [&#39;./src/js/index.js&#39;, &#39;./src/index.html&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;512-source-map&#34;&gt;5.1.2 source-map&lt;/h3&gt;
+&lt;p&gt;source-map：一种提供&lt;strong&gt;源代码到构建后代码的映射&lt;/strong&gt;的技术 （如果构建后代码出错了，通过映射可以追踪源代码错误）&lt;/p&gt;
+&lt;p&gt;参数：&lt;code&gt;[inline-|hidden-|eval-][nosources-][cheap-[module-]]source-map&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;devtool: &#39;eval-source-map&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可选方案：[生成source-map的位置|给出的错误代码信息]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;source-map：外部，错误代码准确信息 和 源代码的错误位置&lt;/li&gt;
+&lt;li&gt;inline-source-map：内联，只生成一个内联 source-map，错误代码准确信息 和 源代码的错误位置&lt;/li&gt;
+&lt;li&gt;hidden-source-map：外部，错误代码错误原因，但是没有错误位置（为了隐藏源代码），不能追踪源代码错误，只能提示到构建后代码的错误位置&lt;/li&gt;
+&lt;li&gt;eval-source-map：内联，每一个文件都生成对应的 source-map，都在 eval 中，错误代码准确信息 和 源代码的错误位&lt;/li&gt;
+&lt;li&gt;nosources-source-map：外部，错误代码准确信息，但是没有任何源代码信息（为了隐藏源代码）&lt;/li&gt;
+&lt;li&gt;cheap-source-map：外部，错误代码准确信息 和 源代码的错误位置，只能把错误精确到整行，忽略列&lt;/li&gt;
+&lt;li&gt;cheap-module-source-map：外部，错误代码准确信息 和 源代码的错误位置，module 会加入 loader 的 source-map&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;内联 和 外部的区别：1. 外部生成了文件，内联没有 2. 内联构建速度更快&lt;/p&gt;
+&lt;p&gt;开发/生产环境可做的选择：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;开发环境&lt;/strong&gt;：需要考虑速度快，调试更友好&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;速度快( eval &amp;gt; inline &amp;gt; cheap &amp;gt;... )
+&lt;ol&gt;
+&lt;li&gt;eval-cheap-souce-map&lt;/li&gt;
+&lt;li&gt;eval-source-map&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;调试更友好
+&lt;ol&gt;
+&lt;li&gt;souce-map&lt;/li&gt;
+&lt;li&gt;cheap-module-souce-map&lt;/li&gt;
+&lt;li&gt;cheap-souce-map&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;最终得出最好的两种方案 --&amp;gt; eval-source-map（完整度高，内联速度快） / eval-cheap-module-souce-map（错误提示忽略列但是包含其他信息，内联速度快）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;生产环境&lt;/strong&gt;：需要考虑源代码要不要隐藏，调试要不要更友好&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内联会让代码体积变大，所以在生产环境不用内联&lt;/li&gt;
+&lt;li&gt;隐藏源代码
+&lt;ol&gt;
+&lt;li&gt;nosources-source-map 全部隐藏&lt;/li&gt;
+&lt;li&gt;hidden-source-map 只隐藏源代码，会提示构建后代码错误信息&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;最终得出最好的两种方案 --&amp;gt; source-map（最完整） / cheap-module-souce-map（错误提示一整行忽略列）&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;52-生产环境性能优化&#34;&gt;5.2 生产环境性能优化&lt;/h2&gt;
+&lt;h3 id=&#34;521-优化打包构建速度&#34;&gt;5.2.1 优化打包构建速度&lt;/h3&gt;
+&lt;h4 id=&#34;5211-oneof&#34;&gt;5.2.1.1 oneOf&lt;/h4&gt;
+&lt;p&gt;oneOf：匹配到 loader 后就不再向后进行匹配，优化生产环境的打包构建速度&lt;/p&gt;
+&lt;p&gt;代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;module: {
+  rules: [
+    {
+      // js 语法检查
+      test: /\.js$/,
+      exclude: /node_modules/,
+      // 优先执行
+      enforce: &#39;pre&#39;,
+      loader: &#39;eslint-loader&#39;,
+      options: {
+        fix: true
+      }
+    },
+    {
+      // oneOf 优化生产环境的打包构建速度
+      // 以下loader只会匹配一个（匹配到了后就不会再往下匹配了）
+      // 注意：不能有两个配置处理同一种类型文件（所以把eslint-loader提取出去放外面）
+      oneOf: [
+        {
+          test: /\.css$/,
+          use: [...commonCssLoader]
+        },
+        {
+          test: /\.less$/,
+          use: [...commonCssLoader, &#39;less-loader&#39;]
+        },
+        {
+          // js 兼容性处理
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: &#39;babel-loader&#39;,
+          options: {
+            presets: [
+              [
+                &#39;@babel/preset-env&#39;,
+                {
+                  useBuiltIns: &#39;usage&#39;,
+                  corejs: {version: 3},
+                  targets: {
+                    chrome: &#39;60&#39;,
+                    firefox: &#39;50&#39;
+                  }
+                }
+              ]
+            ]
+          }
+        },
+        {
+          test: /\.(jpg|png|gif)/,
+          loader: &#39;url-loader&#39;,
+          options: {
+            limit: 8 * 1024,
+            name: &#39;[hash:10].[ext]&#39;,
+            outputPath: &#39;imgs&#39;,
+            esModule: false
+          }
+        },
+        {
+          test: /\.html$/,
+          loader: &#39;html-loader&#39;
+        },
+        {
+          exclude: /\.(js|css|less|html|jpg|png|gif)/,
+          loader: &#39;file-loader&#39;,
+          options: {
+            outputPath: &#39;media&#39;
+          }
+        }
+      ]
+    }
+  ]
+},
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;5212-babel-缓存&#34;&gt;5.2.1.2 babel 缓存&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;babel 缓存&lt;/strong&gt;：类似 HMR，将 babel 处理后的资源缓存起来（哪里的 js 改变就更新哪里，其他 js 还是用之前缓存的资源），让第二次打包构建速度更快&lt;/p&gt;
+&lt;p&gt;代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  test: /\.js$/,
+  exclude: /node_modules/,
+  loader: &#39;babel-loader&#39;,
+  options: {
+    presets: [
+      [
+        &#39;@babel/preset-env&#39;,
+        {
+          useBuiltIns: &#39;usage&#39;,
+          corejs: { version: 3 },
+          targets: {
+            chrome: &#39;60&#39;,
+            firefox: &#39;50&#39;
+          }
+        }
+      ]
+    ],
+    // 开启babel缓存
+    // 第二次构建时，会读取之前的缓存
+    cacheDirectory: true
+  }
+},
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;文件资源缓存&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;文件名不变，就不会重新请求，而是再次用之前缓存的资源&lt;/p&gt;
+&lt;p&gt;1.hash: 每次 wepack 打包时会生成一个唯一的 hash 值。&lt;/p&gt;
+&lt;p&gt;问题：重新打包，所有文件的 hsah 值都改变，会导致所有缓存失效。（可能只改动了一个文件）&lt;/p&gt;
+&lt;p&gt;2.chunkhash：根据 chunk 生成的 hash 值。来源于同一个 chunk的 hash 值一样&lt;/p&gt;
+&lt;p&gt;问题：js 和 css 来自同一个chunk，hash 值是一样的（因为 css-loader 会将 css 文件加载到 js 中，所以同属于一个chunk）&lt;/p&gt;
+&lt;p&gt;3.contenthash: 根据文件的内容生成 hash 值。不同文件 hash 值一定不一样(文件内容修改，文件名里的 hash 才会改变)&lt;/p&gt;
+&lt;p&gt;修改 css 文件内容，打包后的 css 文件名 hash 值就改变，而 js 文件没有改变 hash 值就不变，这样 css 和 js 缓存就会分开判断要不要重新请求资源 --&amp;gt; 让代码上线运行缓存更好使用&lt;/p&gt;
+&lt;h4 id=&#34;5213-多进程打包&#34;&gt;5.2.1.3 多进程打包&lt;/h4&gt;
+&lt;p&gt;多进程打包：某个任务消耗时间较长会卡顿，多进程可以同一时间干多件事，效率更高。&lt;/p&gt;
+&lt;p&gt;优点是提升打包速度，缺点是每个进程的开启和交流都会有开销（babel-loader消耗时间最久，所以使用thread-loader针对其进行优化）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  test: /\.js$/,
+  exclude: /node_modules/,
+  use: [
+    /* 
+      thread-loader会对其后面的loader（这里是babel-loader）开启多进程打包。 
+      进程启动大概为600ms，进程通信也有开销。(启动的开销比较昂贵，不要滥用)
+      只有工作消耗时间比较长，才需要多进程打包
+    */
+    {
+      loader: &#39;thread-loader&#39;,
+      options: {
+        workers: 2 // 进程2个
+      }
+    },
+    {
+      loader: &#39;babel-loader&#39;,
+      options: {
+        presets: [
+          [
+            &#39;@babel/preset-env&#39;,
+            {
+              useBuiltIns: &#39;usage&#39;,
+              corejs: { version: 3 },
+              targets: {
+                chrome: &#39;60&#39;,
+                firefox: &#39;50&#39;
+              }
+            }
+          ]
+        ],
+        // 开启babel缓存
+        // 第二次构建时，会读取之前的缓存
+        cacheDirectory: true
+      }
+    }
+  ]
+},
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;5214-externals&#34;&gt;5.2.1.4 externals&lt;/h4&gt;
+&lt;p&gt;externals：让某些库不打包，通过 cdn 引入&lt;/p&gt;
+&lt;p&gt;webpack.config.js 中配置：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;externals: {
+  // 拒绝jQuery被打包进来(通过cdn引入，速度会快一些)
+  // 忽略的库名 -- npm包名
+  jquery: &#39;jQuery&#39;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;需要在 index.html 中通过 cdn 引入：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;script src=&amp;quot;https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;5215-dll&#34;&gt;5.2.1.5 dll&lt;/h4&gt;
+&lt;p&gt;dll：让某些库单独打包，后直接引入到 build 中。可以在 code split 分割出 node_modules 后再用 dll 更细的分割，优化代码运行的性能。&lt;/p&gt;
+&lt;p&gt;webpack.dll.js 配置：(将 jquery 单独打包)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/*
+  node_modules的库会打包到一起，但是很多库的时候打包输出的js文件就太大了
+  使用dll技术，对某些库（第三方库：jquery、react、vue...）进行单独打包
+  当运行webpack时，默认查找webpack.config.js配置文件
+  需求：需要运行webpack.dll.js文件
+    --&amp;gt; webpack --config webpack.dll.js（运行这个指令表示以这个配置文件打包）
+*/
+const { resolve } = require(&#39;path&#39;);
+const webpack = require(&#39;webpack&#39;);
+
+module.exports = {
+  entry: {
+    // 最终打包生成的[name] --&amp;gt; jquery
+    // [&#39;jquery] --&amp;gt; 要打包的库是jquery
+    jquery: [&#39;jquery&#39;]
+  },
+  output: {
+    // 输出出口指定
+    filename: &#39;[name].js&#39;, // name就是jquery
+    path: resolve(__dirname, &#39;dll&#39;), // 打包到dll目录下
+    library: &#39;[name]_[hash]&#39;, // 打包的库里面向外暴露出去的内容叫什么名字
+  },
+  plugins: [
+    // 打包生成一个manifest.json --&amp;gt; 提供jquery的映射关系（告诉webpack：jquery之后不需要再打包和暴露内容的名称）
+    new webpack.DllPlugin({
+      name: &#39;[name]_[hash]&#39;, // 映射库的暴露的内容名称
+      path: resolve(__dirname, &#39;dll/manifest.json&#39;) // 输出文件路径
+    })
+  ],
+  mode: &#39;production&#39;
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;webpack.config.js 配置：(告诉 webpack 不需要再打包 jquery，并将之前打包好的 jquery 跟其他打包好的资源一同输出到 build 目录下)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 引入插件
+const webpack = require(&#39;webpack&#39;);
+const AddAssetHtmlWebpackPlugin = require(&#39;add-asset-html-webpack-plugin&#39;);
+
+// plugins中配置：
+plugins: [
+  new HtmlWebpackPlugin({
+    template: &#39;./src/index.html&#39;
+  }),
+  // 告诉webpack哪些库不参与打包，同时使用时的名称也得变
+  new webpack.DllReferencePlugin({
+    manifest: resolve(__dirname, &#39;dll/manifest.json&#39;)
+  }),
+  // 将某个文件打包输出到build目录下，并在html中自动引入该资源
+  new AddAssetHtmlWebpackPlugin({
+    filepath: resolve(__dirname, &#39;dll/jquery.js&#39;)
+  })
+],
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;522-优化代码运行的性能&#34;&gt;5.2.2 优化代码运行的性能&lt;/h3&gt;
+&lt;h4 id=&#34;5221-缓存&#34;&gt;5.2.2.1 缓存&lt;/h4&gt;
+&lt;h4 id=&#34;5222-tree-shaking树摇&#34;&gt;5.2.2.2 tree shaking（树摇）&lt;/h4&gt;
+&lt;p&gt;tree shaking：去除无用代码&lt;/p&gt;
+&lt;p&gt;前提：1. 必须使用 ES6 模块化 2. 开启 production 环境 （这样就自动会把无用代码去掉）&lt;/p&gt;
+&lt;p&gt;作用：减少代码体积&lt;/p&gt;
+&lt;p&gt;在 package.json 中配置：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;quot;sideEffects&amp;quot;: false&lt;/code&gt; 表示所有代码都没有副作用（都可以进行 tree shaking）&lt;/p&gt;
+&lt;p&gt;这样会导致的问题：可能会把 css / @babel/polyfill 文件干掉（副作用）&lt;/p&gt;
+&lt;p&gt;所以可以配置：&lt;code&gt;&amp;quot;sideEffects&amp;quot;: [&amp;quot;*.css&amp;quot;, &amp;quot;*.less&amp;quot;]&lt;/code&gt; 不会对css/less文件tree shaking处理&lt;/p&gt;
+&lt;h4 id=&#34;5223-code-split代码分割&#34;&gt;5.2.2.3 code split（代码分割）&lt;/h4&gt;
+&lt;p&gt;代码分割。将打包输出的一个大的 bundle.js 文件拆分成多个小文件，这样可以并行加载多个文件，比加载一个文件更快。&lt;/p&gt;
+&lt;p&gt;1.多入口拆分&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;entry: {
+    // 多入口：有一个入口，最终输出就有一个bundle
+    index: &#39;./src/js/index.js&#39;,
+    test: &#39;./src/js/test.js&#39;
+  },
+  output: {
+    // [name]：取文件名
+    filename: &#39;js/[name].[contenthash:10].js&#39;,
+    path: resolve(__dirname, &#39;build&#39;)
+  },
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2.optimization：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;optimization: {
+    splitChunks: {
+      chunks: &#39;all&#39;
+    }
+  },
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;将 node_modules 中的代码单独打包（大小超过30kb）&lt;/li&gt;
+&lt;li&gt;自动分析多入口chunk中，有没有公共的文件。如果有会打包成单独一个chunk(比如两个模块中都引入了jquery会被打包成单独的文件)（大小超过30kb）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;3.import 动态导入语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/*
+  通过js代码，让某个文件被单独打包成一个chunk
+  import动态导入语法：能将某个文件单独打包(test文件不会和index打包在同一个文件而是单独打包)
+  webpackChunkName:指定test单独打包后文件的名字
+*/
+import(/* webpackChunkName: &#39;test&#39; */&#39;./test&#39;)
+  .then(({ mul, count }) =&amp;gt; {
+    // 文件加载成功~
+    // eslint-disable-next-line
+    console.log(mul(2, 5));
+  })
+  .catch(() =&amp;gt; {
+    // eslint-disable-next-line
+    console.log(&#39;文件加载失败~&#39;);
+  });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;5224-lazy-loading懒加载预加载&#34;&gt;5.2.2.4 lazy loading（懒加载/预加载）&lt;/h4&gt;
+&lt;p&gt;1.懒加载：当文件需要使用时才加载（需要代码分割）。但是如果资源较大，加载时间就会较长，有延迟。&lt;/p&gt;
+&lt;p&gt;2.正常加载：可以认为是并行加载（同一时间加载多个文件）没有先后顺序，先加载了不需要的资源就会浪费时间。&lt;/p&gt;
+&lt;p&gt;3.预加载 prefetch（兼容性很差）：会在使用之前，提前加载。等其他资源加载完毕，浏览器空闲了，再偷偷加载这个资源。这样在使用时已经加载好了，速度很快。所以在懒加载的基础上加上预加载会更好。&lt;/p&gt;
+&lt;p&gt;代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;document.getElementById(&#39;btn&#39;).onclick = function() {
+  // 将import的内容放在异步回调函数中使用，点击按钮，test.js才会被加载(不会重复加载)
+  // webpackPrefetch: true表示开启预加载
+  import(/* webpackChunkName: &#39;test&#39;, webpackPrefetch: true */&#39;./test&#39;).then(({ mul }) =&amp;gt; {
+    console.log(mul(4, 5));
+  });
+  import(&#39;./test&#39;).then(({ mul }) =&amp;gt; {
+    console.log(mul(2, 5))
+  })
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;5225-pwa离线可访问技术&#34;&gt;5.2.2.5 pwa（离线可访问技术）&lt;/h4&gt;
+&lt;p&gt;pwa：离线可访问技术（渐进式网络开发应用程序），使用 serviceworker 和 workbox 技术。优点是离线也能访问，缺点是兼容性差。&lt;/p&gt;
+&lt;p&gt;webpack.config.js 中配置：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const WorkboxWebpackPlugin = require(&#39;workbox-webpack-plugin&#39;); // 引入插件
+
+// plugins中加入：
+new WorkboxWebpackPlugin.GenerateSW({
+  /*
+    1. 帮助serviceworker快速启动
+    2. 删除旧的 serviceworker
+
+    生成一个 serviceworker 配置文件
+  */
+  clientsClaim: true,
+  skipWaiting: true
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;index.js 中还需要写一段代码来激活它的使用：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/*
+  1. eslint不认识 window、navigator全局变量
+    解决：需要修改package.json中eslintConfig配置
+    &amp;quot;env&amp;quot;: {
+      &amp;quot;browser&amp;quot;: true // 支持浏览器端全局变量
+    }
+  2. sw代码必须运行在服务器上
+    --&amp;gt; nodejs
+    或--&amp;gt;
+      npm i serve -g
+      serve -s build 启动服务器，将打包输出的build目录下所有资源作为静态资源暴露出去
+*/
+if (&#39;serviceWorker&#39; in navigator) { // 处理兼容性问题
+  window.addEventListener(&#39;load&#39;, () =&amp;gt; {
+    navigator.serviceWorker
+      .register(&#39;/service-worker.js&#39;) // 注册serviceWorker
+      .then(() =&amp;gt; {
+        console.log(&#39;sw注册成功了~&#39;);
+      })
+      .catch(() =&amp;gt; {
+        console.log(&#39;sw注册失败了~&#39;);
+      });
+  });
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;六-webpack-配置详情&#34;&gt;六、Webpack 配置详情&lt;/h1&gt;
+&lt;h2 id=&#34;61-entry&#34;&gt;6.1 entry&lt;/h2&gt;
+&lt;p&gt;entry: 入口起点&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;string --&amp;gt; &#39;./src/index.js&#39;，单入口&lt;/p&gt;
+&lt;p&gt;打包形成一个 chunk。 输出一个 bundle 文件。此时 chunk 的名称默认是 main&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;array --&amp;gt; [&#39;./src/index.js&#39;, &#39;./src/add.js&#39;]，多入口&lt;/p&gt;
+&lt;p&gt;所有入口文件最终只会形成一个 chunk，输出出去只有一个 bundle 文件。&lt;/p&gt;
+&lt;p&gt;（一般只用在 HMR 功能中让 html 热更新生效）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;object，多入口&lt;/p&gt;
+&lt;p&gt;有几个入口文件就形成几个 chunk，输出几个 bundle 文件，此时 chunk 的名称是 key 值&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;--&amp;gt; 特殊用法：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;entry: {
+  // 最终只会形成一个chunk, 输出出去只有一个bundle文件。
+  index: [&#39;./src/index.js&#39;, &#39;./src/count.js&#39;], 
+  // 形成一个chunk，输出一个bundle文件。
+  add: &#39;./src/add.js&#39;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;62-output&#34;&gt;6.2 output&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;output: {
+  // 文件名称（指定名称+目录）
+  filename: &#39;js/[name].js&#39;,
+  // 输出文件目录（将来所有资源输出的公共目录）
+  path: resolve(__dirname, &#39;build&#39;),
+  // 所有资源引入公共路径前缀 --&amp;gt; &#39;imgs/a.jpg&#39; --&amp;gt; &#39;/imgs/a.jpg&#39;
+  publicPath: &#39;/&#39;,
+  chunkFilename: &#39;js/[name]_chunk.js&#39;, // 指定非入口chunk的名称
+  library: &#39;[name]&#39;, // 打包整个库后向外暴露的变量名
+  libraryTarget: &#39;window&#39; // 变量名添加到哪个上 browser：window
+  // libraryTarget: &#39;global&#39; // node：global
+  // libraryTarget: &#39;commonjs&#39; // conmmonjs模块 exports
+},
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;63-module&#34;&gt;6.3 module&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;module: {
+  rules: [
+    // loader的配置
+    {
+      test: /\.css$/,
+      // 多个loader用use
+      use: [&#39;style-loader&#39;, &#39;css-loader&#39;]
+    },
+    {
+      test: /\.js$/,
+      // 排除node_modules下的js文件
+      exclude: /node_modules/,
+      // 只检查src下的js文件
+      include: resolve(__dirname, &#39;src&#39;),
+      enforce: &#39;pre&#39;, // 优先执行
+      // enforce: &#39;post&#39;, // 延后执行
+      // 单个loader用loader
+      loader: &#39;eslint-loader&#39;,
+      options: {} // 指定配置选项
+    },
+    {
+      // 以下配置只会生效一个
+      oneOf: []
+    }
+  ]
+},
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;64-resolve&#34;&gt;6.4 resolve&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;// 解析模块的规则
+resolve: {
+  // 配置解析模块路径别名: 优点：当目录层级很复杂时，简写路径；缺点：路径不会提示
+  alias: {
+    $css: resolve(__dirname, &#39;src/css&#39;)
+  },
+  // 配置省略文件路径的后缀名（引入时就可以不写文件后缀名了）
+  extensions: [&#39;.js&#39;, &#39;.json&#39;, &#39;.jsx&#39;, &#39;.css&#39;],
+  // 告诉 webpack 解析模块应该去找哪个目录
+  modules: [resolve(__dirname, &#39;../../node_modules&#39;), &#39;node_modules&#39;]
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这样配置后，引入文件就可以这样简写：&lt;code&gt;import &#39;$css/index&#39;;&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;65-dev-server&#34;&gt;6.5 dev server&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;devServer: {
+  // 运行代码所在的目录
+  contentBase: resolve(__dirname, &#39;build&#39;),
+  // 监视contentBase目录下的所有文件，一旦文件变化就会reload
+  watchContentBase: true,
+  watchOptions: {
+    // 忽略文件
+    ignored: /node_modules/
+  },
+  // 启动gzip压缩
+  compress: true,
+  // 端口号
+  port: 5000,
+  // 域名
+  host: &#39;localhost&#39;,
+  // 自动打开浏览器
+  open: true,
+  // 开启HMR功能
+  hot: true,
+  // 不要显示启动服务器日志信息
+  clientLogLevel: &#39;none&#39;,
+  // 除了一些基本信息外，其他内容都不要显示
+  quiet: true,
+  // 如果出错了，不要全屏提示
+  overlay: false,
+  // 服务器代理，--&amp;gt; 解决开发环境跨域问题
+  proxy: {
+    // 一旦devServer(5000)服务器接收到/api/xxx的请求，就会把请求转发到另外一个服务器3000
+    &#39;/api&#39;: {
+      target: &#39;http://localhost:3000&#39;,
+      // 发送请求时，请求路径重写：将/api/xxx --&amp;gt; /xxx （去掉/api）
+      pathRewrite: {
+        &#39;^/api&#39;: &#39;&#39;
+      }
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中，跨域问题：同源策略中不同的协议、端口号、域名就会产生跨域。&lt;/p&gt;
+&lt;p&gt;正常的浏览器和服务器之间有跨域，但是服务器之间没有跨域。代码通过代理服务器运行，所以浏览器和代理服务器之间没有跨域，浏览器把请求发送到代理服务器上，代理服务器替你转发到另外一个服务器上，服务器之间没有跨域，所以请求成功。代理服务器再把接收到的响应响应给浏览器。这样就解决开发环境下的跨域问题。&lt;/p&gt;
+&lt;h2 id=&#34;66-optimization&#34;&gt;6.6 optimization&lt;/h2&gt;
+&lt;p&gt;contenthash 缓存会导致一个问题：修改 a 文件导致 b 文件 contenthash 变化。&lt;br&gt;
+因为在 index.js 中引入 a.js，打包后 index.js 中记录了 a.js 的 hash 值，而 a.js 改变，其重新打包后的 hash 改变，导致 index.js 文件内容中记录的 a.js 的 hash 也改变，从而重新打包后 index.js 的 hash 值也会变，这样就会使缓存失效。（改变的是a.js文件但是 index.js 文件的 hash 值也改变了）&lt;br&gt;
+解决办法：runtimeChunk --&amp;gt; 将当前模块记录其他模块的 hash 单独打包为一个文件 runtime，这样 a.js 的 hash 改变只会影响 runtime 文件，不会影响到 index.js 文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;output: {
+  filename: &#39;js/[name].[contenthash:10].js&#39;,
+  path: resolve(__dirname, &#39;build&#39;),
+  chunkFilename: &#39;js/[name].[contenthash:10]_chunk.js&#39; // 指定非入口文件的其他chunk的名字加_chunk
+},
+optimization: {
+  splitChunks: {
+    chunks: &#39;all&#39;,
+    /* 以下都是splitChunks默认配置，可以不写
+    miniSize: 30 * 1024, // 分割的chunk最小为30kb（大于30kb的才分割）
+    maxSize: 0, // 最大没有限制
+    minChunks: 1, // 要提取的chunk最少被引用1次
+    maxAsyncRequests: 5, // 按需加载时并行加载的文件的最大数量为5
+    maxInitialRequests: 3, // 入口js文件最大并行请求数量
+    automaticNameDelimiter: &#39;~&#39;, // 名称连接符
+    name: true, // 可以使用命名规则
+    cacheGroups: { // 分割chunk的组
+      vendors: {
+        // node_modules中的文件会被打包到vendors组的chunk中，--&amp;gt; vendors~xxx.js
+        // 满足上面的公共规则，大小超过30kb、至少被引用一次
+        test: /[\\/]node_modules[\\/]/,
+        // 优先级
+        priority: -10
+      },
+      default: {
+        // 要提取的chunk最少被引用2次
+        minChunks: 2,
+        prority: -20,
+        // 如果当前要打包的模块和之前已经被提取的模块是同一个，就会复用，而不是重新打包
+        reuseExistingChunk: true
+      }
+    } */
+  },
+  // 将index.js记录的a.js的hash值单独打包到runtime文件中
+  runtimeChunk: {
+    name: entrypoint =&amp;gt; `runtime-${entrypoint.name}`
+  },
+  minimizer: [
+    // 配置生产环境的压缩方案：js/css
+    new TerserWebpackPlugin({
+      // 开启缓存
+      cache: true,
+      // 开启多进程打包
+      parallel: true,
+      // 启用sourceMap(否则会被压缩掉)
+      sourceMap: true
+    })
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;七-webpack5-介绍和使用&#34;&gt;七、Webpack5 介绍和使用&lt;/h1&gt;
+&lt;p&gt;此版本重点关注以下内容:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过持久缓存提高构建性能.&lt;/li&gt;
+&lt;li&gt;使用更好的算法和默认值来改善长期缓存.&lt;/li&gt;
+&lt;li&gt;通过更好的树摇和代码生成来改善捆绑包大小.&lt;/li&gt;
+&lt;li&gt;清除处于怪异状态的内部结构，同时在 v4 中实现功能而不引入任何重大更改.&lt;/li&gt;
+&lt;li&gt;通过引入重大更改来为将来的功能做准备，以使我们能够尽可能长时间地使用 v5.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;下载&#34;&gt;下载&lt;/h2&gt;
+&lt;p&gt;npm i webpack@next webpack-cli -D&lt;/p&gt;
+&lt;h2 id=&#34;自动删除-nodejs-polyfills&#34;&gt;自动删除 Node.js Polyfills&lt;/h2&gt;
+&lt;p&gt;早期，webpack 的目标是允许在浏览器中运行大多数 node.js 模块，但是模块格局发生了变化，许多模块用途现在主要是为前端目的而编写的。webpack &amp;lt;= 4 附带了许多 node.js 核心模块的 polyfill，一旦模块使用任何核心模块（即 crypto 模块），这些模块就会自动应用。&lt;/p&gt;
+&lt;p&gt;尽管这使使用为 node.js 编写的模块变得容易，但它会将这些巨大的 polyfill 添加到包中。在许多情况下，这些 polyfill 是不必要的。&lt;/p&gt;
+&lt;p&gt;webpack 5 会自动停止填充这些核心模块，并专注于与前端兼容的模块。&lt;/p&gt;
+&lt;p&gt;迁移：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;尽可能尝试使用与前端兼容的模块。&lt;/li&gt;
+&lt;li&gt;可以为 node.js 核心模块手动添加一个 polyfill。错误消息将提示如何实现该目标。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Chunk 和模块 ID&lt;/p&gt;
+&lt;p&gt;添加了用于长期缓存的新算法。在生产模式下默认情况下启用这些功能。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;chunkIds: &amp;quot;deterministic&amp;quot;, moduleIds: &amp;quot;deterministic&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;chunk-id&#34;&gt;Chunk ID&lt;/h2&gt;
+&lt;p&gt;你可以不用使用 &lt;code&gt;import(/* webpackChunkName: &amp;quot;name&amp;quot; */ &amp;quot;module&amp;quot;)&lt;/code&gt; 在开发环境来为 chunk 命名，生产环境还是有必要的&lt;/p&gt;
+&lt;p&gt;webpack 内部有 chunk 命名规则，不再是以 id(0, 1, 2)命名了&lt;/p&gt;
+&lt;h2 id=&#34;tree-shaking&#34;&gt;Tree Shaking&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;webpack 现在能够处理对嵌套模块的 tree shaking&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;// inner.js
+export const a = 1;
+export const b = 2;
+
+// module.js
+import * as inner from &#39;./inner&#39;;
+export { inner };
+
+// user.js
+import * as module from &#39;./module&#39;;
+console.log(module.inner.a);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在生产环境中, inner 模块暴露的 &lt;code&gt;b&lt;/code&gt; 会被删除&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;webpack 现在能够多个模块之前的关系&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;import { something } from &#39;./something&#39;;
+
+function usingSomething() {
+  return something;
+}
+
+export function test() {
+  return usingSomething();
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;当设置了&lt;code&gt;&amp;quot;sideEffects&amp;quot;: false&lt;/code&gt;时，一旦发现&lt;code&gt;test&lt;/code&gt;方法没有使用，不但删除&lt;code&gt;test&lt;/code&gt;，还会删除&lt;code&gt;&amp;quot;./something&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;webpack 现在能处理对 Commonjs 的 tree shaking&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;output&#34;&gt;Output&lt;/h2&gt;
+&lt;p&gt;webpack 4 默认只能输出 ES5 代码&lt;/p&gt;
+&lt;p&gt;webpack 5 开始新增一个属性 output.ecmaVersion, 可以生成 ES5 和 ES6 / ES2015 代码.&lt;/p&gt;
+&lt;p&gt;如：&lt;code&gt;output.ecmaVersion: 2015&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;SplitChunk&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// webpack4
+minSize: 30000;
+// webpack5
+minSize: {
+  javascript: 30000,
+  style: 50000,
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;caching&#34;&gt;Caching&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;// 配置缓存
+cache: {
+  // 磁盘存储
+  type: &amp;quot;filesystem&amp;quot;,
+  buildDependencies: {
+    // 当配置修改时，缓存失效
+    config: [__filename]
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;缓存将存储到 &lt;code&gt;node_modules/.cache/webpack&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;监视输出文件&#34;&gt;监视输出文件&lt;/h2&gt;
+&lt;p&gt;之前 webpack 总是在第一次构建时输出全部文件，但是监视重新构建时会只更新修改的文件。&lt;/p&gt;
+&lt;p&gt;此次更新在第一次构建时会找到输出文件看是否有变化，从而决定要不要输出全部文件。&lt;/p&gt;
+&lt;h2 id=&#34;默认值&#34;&gt;默认值&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;entry: &amp;quot;./src/index.js&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output.path: path.resolve(__dirname, &amp;quot;dist&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output.filename: &amp;quot;[name].js&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;更多内容&#34;&gt;更多内容&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/webpack/changelog-v5&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+">Webpack</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
+
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
+
+<input hidden id="copy" />
+<script>
+  !function () {
+    let times = document.querySelectorAll('.publish-time');
+    for (let i = 0; i < times.length; i++) {
+      let date = times[i].dataset.t;
+      let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+      if (time < 60) {
+        str = time + '秒之前';
+      } else if (time < 3600) {
+        str = Math.floor(time / 60) + '分钟之前';
+      } else if (time >= 3600 && time < 86400) {
+        str = Math.floor(time / 3600) + '小时之前';
+      } else if (time >= 86400 && time < 259200) {
+        str = Math.floor(time / 86400) + '天之前';
+      } else {
+        str = times[i].textContent;
+      }
+      times[i].textContent = str;
+    }
+  }();
+</script>
+
+<script>
+  let language = '';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
+  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+
+</script>
+<script src="/media/js/motion.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 200
+  });
+</script>
+
+
+<script src="/media/js/mouse/peace.js"></script>
+
+
+<script src="/media/js/cool.js"></script>
+
+
+
+</html>
