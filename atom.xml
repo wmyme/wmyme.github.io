@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmyme.github.io</id>
     <title>MYBLOG</title>
-    <updated>2021-11-15T08:55:35.671Z</updated>
+    <updated>2021-11-16T05:07:31.519Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmyme.github.io"/>
     <link rel="self" href="https://wmyme.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://wmyme.github.io/images/avatar.png</logo>
     <icon>https://wmyme.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, MYBLOG</rights>
+    <entry>
+        <title type="html"><![CDATA[js遍历]]></title>
+        <id>https://wmyme.github.io/post/z8MQXCMhg/</id>
+        <link href="https://wmyme.github.io/post/z8MQXCMhg/">
+        </link>
+        <updated>2021-11-16T05:02:08.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ 正则表达式]]></title>
         <id>https://wmyme.github.io/post/zheng/</id>
@@ -72,12 +79,5 @@
         <link href="https://wmyme.github.io/post/http/">
         </link>
         <updated>2021-08-11T14:44:15.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Webpack]]></title>
-        <id>https://wmyme.github.io/post/hello-gridea/</id>
-        <link href="https://wmyme.github.io/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
     </entry>
 </feed>

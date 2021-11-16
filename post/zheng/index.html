@@ -9,7 +9,7 @@
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
 <title> 正则表达式 | MYBLOG</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1636966532444">
+<link rel="shortcut icon" href="/favicon.ico?v=1637039248808">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -227,7 +227,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">10</span>
+        <span class="site-item-stat-count">11</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -1142,6 +1142,10 @@
   </div>
   <div class="nav">
     <div class="nav-prev">
+      
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="js遍历" href="https://wmyme.github.io/post/z8MQXCMhg/">js遍历</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="js遍历" href="https://wmyme.github.io/post/z8MQXCMhg/">上一篇</a>
       
     </div>
     <div class="nav-next">
@@ -2146,6 +2150,94 @@
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://wmyme.github.io/post/z8MQXCMhg/"" data-c="
+          &lt;h2 id=&#34;js数组遍历&#34;&gt;JS数组遍历&lt;/h2&gt;
+&lt;h3 id=&#34;1普通for循环&#34;&gt;1.普通for循环&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var arr = [1,2,0,3,9];
+ for ( var i = 0; i &amp;lt;arr.length; i++){
+    console.log(arr[i]);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;2优化版for循环&#34;&gt;2.优化版for循环&lt;/h3&gt;
+&lt;p&gt;使用变量，将长度缓存起来，避免重复获取长度，数组很大时优化效果明显&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;for(var j = 0,len = arr.length; j &amp;lt; len; j++){
+    console.log(arr[j]);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3foreach&#34;&gt;3.forEach&lt;/h3&gt;
+&lt;p&gt;ES5推出的,数组自带的循环，主要功能是遍历数组，实际性能比for还弱&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;arr.forEach(function(value,i){
+　　console.log(&#39;forEach遍历:&#39;+i+&#39;--&#39;+value);
+
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;forEach这种方法也有一个小缺陷：你不能使用break语句中断循环，也不能使用return语句返回到外层函数。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4map遍历&#34;&gt;4.map遍历&lt;/h3&gt;
+&lt;p&gt;map即是 “映射”的意思 用法与 forEach 相似,同样&lt;strong&gt;不能使用break语句中断循环，也不能使用return语句返回到外层函数。&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;arr.map(function(value,index){
+    console.log(&#39;map遍历:&#39;+index+&#39;--&#39;+value);
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;map遍历支持使用return语句，支持return返回值&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var temp=arr.map(function(val,index){
+  console.log(val);  
+  return val*val           
+})
+console.log(temp);  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;forEach、map都是ECMA5新增数组的方法，所以ie9以下的浏览器还不支持&lt;/p&gt;
+&lt;h3 id=&#34;5for-of遍历&#34;&gt;5.for-of遍历&lt;/h3&gt;
+&lt;p&gt;ES6新增功能&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;for( let i of arr){
+    console.log(i);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;for-of这个方法避开了for-in循环的所有缺陷&lt;/li&gt;
+&lt;li&gt;与forEach()不同的是，它可以正确响应break、continue和return语句&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;for-of循环不仅支持数组，还支持大多数类数组对象，例如DOM NodeList对象。for-of循环也支持字符串遍历&lt;/p&gt;
+&lt;h2 id=&#34;js对象遍历&#34;&gt;JS对象遍历&lt;/h2&gt;
+&lt;h3 id=&#34;1for-in遍历&#34;&gt;1.for-in遍历&lt;/h3&gt;
+&lt;p&gt;for-in是为遍历对象而设计的，不适用于遍历数组。(遍历数组的缺点：数组的下标index值是数字，for-in遍历的index值&amp;quot;0&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;2&amp;quot;等是字符串)&lt;/p&gt;
+&lt;p&gt;for-in循环存在缺陷：循环会遍历对象自身的和继承的可枚举属性(不含Symbol属性)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;for (var index in arr){
+    console.log(arr[index]);
+    console.log(index);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;2使用objectkeys遍历&#34;&gt;2.使用Object.keys()遍历&lt;/h3&gt;
+&lt;p&gt;返回一个数组,包括对象自身的(不含继承的)所有可枚举属性(不含Symbol属性).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var obj = {&#39;0&#39;:&#39;a&#39;,&#39;1&#39;:&#39;b&#39;,&#39;2&#39;:&#39;c&#39;};
+
+Object.keys(obj).forEach(function(key){
+
+     console.log(key,obj[key]);
+
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3使用objectgetownpropertynamesobj遍历&#34;&gt;3.使用Object.getOwnPropertyNames(obj)遍历&lt;/h3&gt;
+&lt;p&gt;返回一个数组,包含对象自身的所有属性(不含Symbol属性,但是包括不可枚举属性).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var obj = {&#39;0&#39;:&#39;a&#39;,&#39;1&#39;:&#39;b&#39;,&#39;2&#39;:&#39;c&#39;};
+Object.getOwnPropertyNames(obj).forEach(function(key){
+
+    console.log(key,obj[key]);
+
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;4使用reflectownkeysobj遍历&#34;&gt;4.使用Reflect.ownKeys(obj)遍历&lt;/h3&gt;
+&lt;p&gt;返回一个数组,包含对象自身的所有属性,不管属性名是Symbol或字符串,也不管是否可枚举.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var obj = {&#39;0&#39;:&#39;a&#39;,&#39;1&#39;:&#39;b&#39;,&#39;2&#39;:&#39;c&#39;};
+Reflect.ownKeys(obj).forEach(function(key){
+
+　　console.log(key,obj[key]);
+
+});
+&lt;/code&gt;&lt;/pre&gt;
+">js遍历</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://wmyme.github.io/post/zheng/"" data-c="
